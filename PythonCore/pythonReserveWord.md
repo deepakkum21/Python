@@ -6,3 +6,10 @@
 
 ## How to list of keywords in your current version:   
 ![](https://github.com/deepakkum21/Python/blob/master/PythonCore/images/import%20of%20keyword.PNG)   
+
+## Description of Keywords in Python with examples
+1. **True, False**
+    - True and False are **truth values in Python**. 
+    - They are the **results of comparison operations or logical (Boolean) operations** in Python. 
+    - For example: 
+    ![]
