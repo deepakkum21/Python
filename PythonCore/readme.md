@@ -85,7 +85,7 @@ learn python 3 because from **2020 no support for python 2 will be there**
 1. The keyword which we cannot use them as constant or variable or any other identifier names. 
 2. They have predefined meaning and function.    
 
-![Python ReserveWord]()
-more info:-()
+![Python ReserveWord](https://github.com/deepakkum21/Python/blob/master/PythonCore/images/Python%20reserve%20word%20list.PNG)
+more info:-(https://github.com/deepakkum21/Python/blob/master/PythonCore/pythonReserveWord.md)
 
 
