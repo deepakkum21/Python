@@ -5,3 +5,4 @@ Python related concepts and stuffs
 1. Python is an i**nterpreted, high-level programming language** for **general-purpose programming**. 
 2. Created by **Guido van Rossum** .
 3. first released in **1991**
+4. Syntax taken from C and ABC language
