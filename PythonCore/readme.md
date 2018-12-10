@@ -83,7 +83,9 @@ learn python 3 because from **2020 no support for python 2 will be there**
 
 ## Reserved Words:
 1. The keyword which we cannot use them as constant or variable or any other identifier names. 
-2. They have predefined meaning and function.    
+2. They have predefined meaning and function.
+3. all 33 keywords have alphabet only.
+4. Except None, True, flase all have lower case alphabet.    
 
 ![Python ReserveWord](https://github.com/deepakkum21/Python/blob/master/PythonCore/images/Python%20reserve%20word%20list.PNG)     
 

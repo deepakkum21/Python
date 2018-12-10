@@ -12,4 +12,14 @@
     - True and False are **truth values in Python**. 
     - They are the **results of comparison operations or logical (Boolean) operations** in Python. 
     - For example: 
-    ![]
+    ![]()
+
+    - **True and False in python is same as 1 and 0**. This can be justified with the following example:  
+    ![]()   
+
+2. **None**
+    - None is a **special constant** in Python that **represents the absence of a value or a null value**.
+
+
+    ![moreinfo](https://www.programiz.com/python-programming/keyword-list)     
+
