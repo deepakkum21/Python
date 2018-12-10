@@ -55,4 +55,37 @@
     - Python 3.5 - May 30, 2014
 
 ## Difference between Python 2 and Python 3:
-![diffrence]    
+![diffrence](https://github.com/deepakkum21/Python/blob/master/PythonCore/images/python-2-vs-3-2018.png)        
+learn python 3 because from **2020 no support for python 2 will be there**
+
+## Python Identifiers
+1. A Python identifier is a **name used to identify** a *variable, function, class, module or other object*. 
+2. An identifier **starts with a letter A to Z or a to z or an underscore (_)** followed by zero or more letters, underscores and digits (0 to 9).
+3. Python **does not allow punctuation characters** such as @, $, and % within identifiers.
+4. Python is a **case sensitive programming language**. Thus, **Manpower and manpower are two different identifiers** in Python.
+5. An Identifier **should not start with digit** 
+    - eg 12Name -> not valid python identifier.
+6. **No length restriction but not recomended** to have to lengthy identifier name so that readiblity is maintained.
+7. reserved words should not be used as identifiers.
+    - if=20 is not allowed and will get invalid syntac error
+
+### Naming conventions for Python identifiers −
+1. Class names start with an uppercase letter. 
+    - ClassName
+2. All other identifiers start with a lowercase letter.
+    - methodName
+3. Starting an identifier with a **single leading underscore indicates that the identifier is private**. 
+    - eg _privateIndetifier
+4. Starting an identifier with **two leading underscores indicates a strongly private identifier**.
+    - eg __stronglyPrivateIndetifier
+5. If the identifier **also ends with two trailing underscores**, the identifier is a **language-defined special name**.
+    - eg __languageDefinedIdentifier__
+
+## Reserved Words:
+1. The keyword which we cannot use them as constant or variable or any other identifier names. 
+2. They have predefined meaning and function.    
+
+![Python ReserveWord]()
+more info:-()
+
+
