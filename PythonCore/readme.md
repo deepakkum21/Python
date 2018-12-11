@@ -92,23 +92,24 @@ learn python 3 because from **2020 no support for python 2 will be there**
 more info:-(https://github.com/deepakkum21/Python/blob/master/PythonCore/pythonReserveWord.md)    
 
 ## Python DataTypes:
-more info:-(https://realpython.com/python-data-types/)
-1. Fundamental datatypes 
-- int
-- float
-- str
-- bool
-- complex
-2. 
-- bytes
-- bytearray
-- list
-- range
-- set
-- tuple
-- dict
-- frozenset
-- None
+more info:-(https://realpython.com/python-data-types/)                       
+
+| **datatypes** | **mutable/immutable** | **fundamental data-type** |                       
+| ------------- | --------------------- | ------------------------- |               
+| int           | immutable             |              yes          |                
+| float         | immutable             |              yes          |                
+| str           | immutable             |              yes          |                  
+| bool          | immutable             |              yes          |                     
+| complex       | immutable             |              yes          |                    
+| bytes         | immutable             |              no           |                    
+| bytearray     | mutable               |              no           |                     
+| list          | mutable               |              no           |                         
+| range         | immutable             |              no           |                       
+| set           | mutable               |              no           |                   
+| tuple         | immutable             |              no           |                       
+| dict          | mutable               |              no           |                        
+| frozenset     | immutable             |              no           |                       
+| None          |                       |              no           |                        
 
 
 ### int :-
@@ -212,6 +213,103 @@ more info:-(https://realpython.com/python-data-types/)
     - eg: S = 'Deepak'  =>  S[0]   => 'D'   =>  S[-1]  => 'k'
 
 
+### bytes: -
+1. To represent a group of byte values.
+2. only allowed values are 0 to 255.
+    - x = [10,20,30] => b = bytes(x)  => type(b)  <class 'bytes'>
+3. Cannot change the value of byte
+    - x = [10,20,30] => b = bytes(x)  => b[0] => 10 =. b[0] = 50 (invalid)
+4. if want to store binary data of img, audio, video files
+5. it is **immutable**.
+
+
+### bytearray: -
+1. It is same as bytes except we can change the value.
+2. To represent a group of byte values.
+3. only allowed values are 0 to 255.
+    - x = [10,20,30] => b = bytearray(x)  => type(b)  <class 'bytearray'>
+4. Allowed to change the value of bytearray
+    - x = [10,20,30] => b = bytearray(x)  => b[0] => 10 =. b[0] = 50 (valid)
+5. It is **mutable**
+
+### list[]: - 
+1. To represent group of individual object.
+2. Insertion order is preserved.
+3. Duplicate object are allowed.
+4. Hetrogeneous objects are allowed.
+5. It is **mutable** 
+6. It is dynamic :-
+    - .append() -> to increase the size
+    - .remove() -> to decrease the size
+
+### tuple(): -
+1. To represent group of individual object.
+2. Insertion order is preserved.
+3. Duplicate object are allowed.
+4. Hetrogeneous objects are allowed.
+5. It is **immutable** 
+6. Read only version of List.
+7. Cannot increase or decrease the size , i.e. it is not dynamic
+8. To create 1 length tuple 
+    - eg t = **(10,) => type(t) => <class 'tuple'>**
+    - if t = (10) => type(t) =. <class 'int'>
+9. **() is optional**
+    - eg t = 10,30,4,56  => type(t) => <class 'tuple'>
+ 
+### set{}: -
+1. To represent group of individual object where order is not important.
+2. Insertion order is **not** preserved.
+3. Duplicate object are not allowed.
+4. if duplicate object are present would eliminate itself by storing unique one.
+5. it doesnot support indexing , slicing
+    - eg s = {10,20,30}   => s[0]   => invalid
+6. It is **mutable** 
+7. It is dynamic :-
+    - .add() -> to increase the size
+    - .remove() -> to decrease the size 
+8. use loop to get the data 
+    - for x in s : print(x)
+9. s = {} is dict not set
+10. To create empty set 
+    **emptySet = set()**    
+
+### frozenset: -
+1. same as set
+2. it is **immutable**
+3. it is not dynamic i.e cannot add or remove object 
+4. s = {10,20,30}   => fs = frozrnset(s)   => type(fs)  => <class 'frozenset'>
+
+### dict{}:-
+1. To represent group of individual object as key-value pairs.
+2. Key :
+    - duplicates are not allowed.
+    - hetrogenous object is allowed
+    - key **can be tuple but not list**
+3. Value :
+    - duplicates are allowed.
+    - hetrogenous object is allowed
+4. To add key-value in existing dict
+    eg: p = {101:'deepak'}   =>  p[key] = value  => p[102] = 'abc'   => p  => {101:'deepak', 102:'abc'}
+5. it is **mutable**
+6. if trying to add duplicate key but value is different , wouldn't give erroe but it will override the previous value with the new value for that key which was duplicate.
+
+### range: -
+1. To represent sequence of numbers.
+2. It is **immutable**.
+3. Form1 : **range(x)**
+    - from 0 to x-1 
+    - eg r= range(10)    =>  for i in r: print(i)    => 0,1,2,3,4,5,6,7,8,9
+4. Form2 : **range(x, y)**
+    - from x to y-1
+    - eg r= range(4,10)    =>  for i in r: print(i)    => 4,5,6,7,8,9
+5. Form3: **range(begin, end, step)**
+    - from begin to end-1 with next increment step
+    - eg r= range(4,10,3)    =>  for i in r: print(i)    => 4,7
+
+
+
+
+
 ## Slice Operator :-
 - The slice operator [n:m] returns the part of the string from the n’th character to the m’th character, including the first but excluding the last. 
 - In other words, start with the character at index n and go up to but do not include the character at index m. 
@@ -291,7 +389,7 @@ more info:-(https://realpython.com/python-data-types/)
 
 ## Fundamental datatypes VS immutability
 1. All fundamental data types are immutable (once object is created not allowed to change its content, if changed with those changes a new object will be created).
-2. Immutablity helps in reusability (it varies from flavour to flavour of python) :        
+2. Immutablity helps in reusability (it varies from flavour to flavour of python) use **id()** to check the address:        
 
 | **Data type** | **Reusability** | **What extent** |                   
 | ------------- | --------------- | --------------- |                   
