@@ -265,7 +265,7 @@ more info:-(https://realpython.com/python-data-types/)
 
 3. (a).  **complex(x)**
     - here x is the real part and imaginary part is not specified therefore, is 0.                                                          
-    ![example]()
+    ![example](https://github.com/deepakkum21/Python/blob/master/PythonCore/images/complex()example.PNG)
 3. (b). **complex(x,y)**
     - here x is the real part and y is the imaginary part.
     - complex(string, string) : complex("10", 4.5) => invalid (cannot take second arg when 1st arg is String)
@@ -289,6 +289,16 @@ more info:-(https://realpython.com/python-data-types/)
 5. **str(x)**
     - anything can be converted to string
 
+## Fundamental datatypes VS immutability
+1. All fundamental data types are immutable (once object is created not allowed to change its content, if changed with those changes a new object will be created).
+2. Immutablity helps in reusability (it varies from flavour to flavour of python) :        
 
+| **Data type** | **Reusability** | **What extent** |                   
+| ------------- | --------------- | --------------- |                   
+| int           |  yes            | 0 to 256       |               
+| float         |  no             | n.a.       |                  
+| bool          |  yes            | always       |            
+| str           |  yes            | varies from flavour to flavour |              
+| complex       |  no             | n.a.        |              
 
 
