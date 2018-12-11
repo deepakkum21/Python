@@ -122,5 +122,9 @@ Special operators
         - not ' ' => False
     
 ## Bitwise Operators: 
-
+1. Bitwise operator works on bits and performs bit by bit operation.
+2. Can be **only applied for Int and bool** types not for string type.
+3. & => if both bits are 1 then result is 1
+4. | => if at least one bit is one then result is 1
+5. ^ => if both bits are different then result is 1
     
