@@ -21,5 +21,5 @@
     - None is a **special constant** in Python that **represents the absence of a value or a null value**.
 
 
-    ![moreinfo](https://www.programiz.com/python-programming/keyword-list)     
+    (https://www.programiz.com/python-programming/keyword-list)     
 

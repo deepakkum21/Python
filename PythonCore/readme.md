@@ -296,18 +296,27 @@ more info:-(https://realpython.com/python-data-types/)
 ### range: -
 1. To represent sequence of numbers.
 2. It is **immutable**.
-3. Form1 : **range(x)**
+3. Arguments for range should be integral values.
+4. Form1 : **range(x)**
     - from 0 to x-1 
     - eg r= range(10)    =>  for i in r: print(i)    => 0,1,2,3,4,5,6,7,8,9
-4. Form2 : **range(x, y)**
+5. Form2 : **range(x, y)**
     - from x to y-1
     - eg r= range(4,10)    =>  for i in r: print(i)    => 4,5,6,7,8,9
-5. Form3: **range(begin, end, step)**
-    - from begin to end-1 with next increment step
+6. Form3: **range(begin, end, step)**
+    - from begin to end-1 everytime increment with step
     - eg r= range(4,10,3)    =>  for i in r: print(i)    => 4,7
 
 
-
+### NoneType; -
+1. It is like null in java
+2. None  => nothing
+3. eg  def noneEg() :                                                                                                                                      
+        a = 1                                                                                                                                     
+        b = 2                                                                                                                                     
+        c = a + b                                                                                                                                     
+    print(a_void_function())   =>   gives None as nothing returned
+4. type(None)    =>   <class 'NoneType'>
 
 
 ## Slice Operator :-
@@ -397,6 +406,12 @@ more info:-(https://realpython.com/python-data-types/)
 | float         |  no             | n.a.       |                  
 | bool          |  yes            | always       |            
 | str           |  yes            | varies from flavour to flavour |              
-| complex       |  no             | n.a.        |              
+| complex       |  no             | n.a.        |           
+
+
+## Escape Sequence :-                                                                                                                                        
+![escape-sequence]()
+
+
 
 
