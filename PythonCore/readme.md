@@ -168,7 +168,7 @@ more info:-(https://realpython.com/python-data-types/)
     - eg.  x=2+3j   >>>  type(2+3j)   => <class 'complex'>
 3. - x = 3+5j   (valid)
    - x = 5j+3   (valid) 
-4. Real part can be specified using Decimal, Binary, Octal, HexaDecimal but imginary part should be specified only using Decimal
+4. Real part can be specified using Decimal, Binary, Octal, HexaDecimal but imginary part should be specified only using Decimal(int or float)
     - eg 12+5j       (Valid)
     - eg 0b1101+5j   (Valid)
     - eg 0o12451+5j  (Valid)
@@ -239,21 +239,55 @@ more info:-(https://realpython.com/python-data-types/)
 - str()
 - complex()
 
-1. **int()**
-- int(float): int(123.456) => 123
-- int(complex) : int(10+5j) => invalid complex to int not allowed  
-- int(bool) : int(True) => 1  (0 : for False)
-- int(string) : int("10") => valid 10 (string should be valid decimal integral)
-- int(string) : int("0B10") => invalid
-- int(string) : int("0o10") => invalid
-- int(string) : int("0X10") => invalid
-- int(string) : int("10.5") => invalid : not integral
-- we can convert any type to int except complex
-- we can convert str to int if and only if str is integral literal of base10
+1. **int(x)**
+    - int(float): int(123.456) => 123
+    - int(complex) : int(10+5j) => invalid complex to int not allowed  
+    - int(bool) : int(True) => 1  (0 : for False)
+    - int(string) : int("10") => valid 10 (string should be valid decimal integral)
+    - int(string) : int("0B10") => invalid
+    - int(string) : int("0o10") => invalid
+    - int(string) : int("0X10") => invalid
+    - int(string) : int("10.5") => invalid : not integral
+    - we can convert any type to int except complex
+    - we can convert str to int if and only if str is integral literal of base10
 
-2. **float()**
-- 
+2. **float(x)**
+    - we can convert any type to float except complex
+    - we can convert str to float if and only if str is integral literal or floating point literal of base10 
+    - float(float): float(123) => 123.0
+    - float(complex) : float(10+5j) => invalid complex to float not allowed  
+    - float(bool) : float(True) => 1.0  (0.0 : for False)
+    - float(string) : float("10") => valid 10.0 (string should be valid decimal integral)
+    - float(string) : float("0B10") => invalid
+    - float(string) : float("0o10") => invalid
+    - float(string) : float("0X10") => invalid
+    - float(string) : float("10.5") => valid 
 
+3. (a).  **complex(x)**
+    - here x is the real part and imaginary part is not specified therefore, is 0.                                                          
+    ![example]()
+3. (b). **complex(x,y)**
+    - here x is the real part and y is the imaginary part.
+    - complex(string, string) : complex("10", 4.5) => invalid (cannot take second arg when 1st arg is String)
+    - complex(int/float, string) : complex(10, "4.5") => invalid second arg cannot be string
+    - complex(float, float) : complex(10.5, 4.5) : valid => 10.5+4.5j
+
+ 4. **bool(x)**
+    - *when x is int*
+        - if x is 0 then False    
+        - if x is other than 0 i.e. -ve or +ve it is True
+    - *when x is floating point*
+        - if x is 0.0 or equal the it is False
+        - if x is non zero i.e. 0.01, -0.002 then it is True
+    - *when x is complex*
+        - when real and imaginary both part is 0 then False . eg bool(0.0 + 0.0j)  => False   , bool(0j) => False
+        - when any one or both value is non zero then it is True
+    - *when x is string*
+        - empty string is False  e.g.: bool('')  => False
+        - non empty string is always True
+
+5. **str(x)**
+    - anything can be converted to string
 
 
 
