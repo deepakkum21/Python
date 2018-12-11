@@ -27,7 +27,8 @@ Special operators
         - 'deepak'*3 => deepakdeepakdeepak
         - 3*'deepak' => deepakdeepakdeepak
         - in this at least one should be int other as string
-2. divison by zero                                                                                        
+2. divison by zero                                  
+
 | **operation** | **result in Java**       | **result in python** |                  
 | ------------- | ------------------------ | -------------------- |
 | 10/0          | divide by zero exception | ZeroDivisonError     |
@@ -37,8 +38,8 @@ Special operators
 
 ## Relational operators / comparison operators           
 
-| **Operator** |	**Description** |	**Example** |                                           
-| ------------ | ------------------ | ------------- |
+| **Operator** |	**Description** |	**Example** |                                                     
+| ------------ | ------------------ | ------------- |                                        
 | == |	If the values of two operands are equal, then the condition becomes true. |	(a == b) is not true. |
 | != |	If values of two operands are not equal, then condition becomes true. |	(a != b) is true. |
 | <> |	If values of two operands are not equal, then condition becomes true. |	(a <> b) is true. This is similar to != operator. |
@@ -118,4 +119,8 @@ Special operators
         - not 0 => True
         - not 45 => False
         - not 'kl' => False
+        - not ' ' => False
+    
+## Bitwise Operators: 
+
     
