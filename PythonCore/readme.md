@@ -410,7 +410,13 @@ more info:-(https://realpython.com/python-data-types/)
 
 
 ## Escape Sequence :-                                                                                                                                        
-![escape-sequence]()
+![escape-sequence](https://github.com/deepakkum21/Python/blob/master/PythonCore/images/escape%20sequence.PNG)    
+
+
+## Constant:- 
+**constant concept is not applicable in python**
+
+
 
 
 
