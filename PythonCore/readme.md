@@ -89,6 +89,172 @@ learn python 3 because from **2020 no support for python 2 will be there**
 
 ![Python ReserveWord](https://github.com/deepakkum21/Python/blob/master/PythonCore/images/Python%20reserve%20word%20list.PNG)     
 
-more info:-(https://github.com/deepakkum21/Python/blob/master/PythonCore/pythonReserveWord.md)
+more info:-(https://github.com/deepakkum21/Python/blob/master/PythonCore/pythonReserveWord.md)    
+
+## Python DataTypes:
+more info:-(https://realpython.com/python-data-types/)
+1. Fundamental datatypes 
+- int
+- float
+- str
+- bool
+- complex
+2. 
+- bytes
+- bytearray
+- list
+- range
+- set
+- tuple
+- dict
+- frozenset
+- None
+
+
+### int :-
+- To represent integral values (whole no)
+- No range , it can accept any whole no 
+    - eg x = 364676646549756436976463564343543 (valid)
+    - x = -25787453487534537351474843453857 (valid)      >> type(x) => <class 'int'>
+- Integral values can be represnt using 4 forms:-
+    - Decimal form
+    - Binary form
+    - Octal form
+    - Hexa Decimal Form
+1. Decimal Form (Base-10)
+    - Allowed digit (0-9)
+    - it is default form of representation
+
+2. Binary Form (base-2)
+    - Allowed digit (0,1)
+    - 0B or 0b should be prefixed to represent   binary form
+    - only allowed for intergal no and not for floating point
+    - eg 0B1111 , 0b011011
+
+3. Octal Form (base-8)
+    - Allowed digit (0-7)
+    - 0O or 0o should be prefixed to represent   Octal form
+    - only allowed for intergal no and not for floating point
+    - 0O014526,  0o74123470
+
+4. HexaDecimal Form (base-16)
+    - Allowed digit (0-9,A-f)
+    - 0x or 0X should be prefixed to represent   HexaDecimal form
+    - only allowed for intergal no and not for floating point
+    - eg 0X458435434ABF, 0x24babf
+
+#### Base Conversions
+- To convert to any of the above form use
+    - bin(x)
+    - oct(x)
+    - hex(x)
+    note :- x can be any thing decimal, octal, binary, hexadecimal
+
+### float :-
+1. To represent  number with floating point.
+2. no range 
+    - eg x = 354331.545643    >> type(x)  => <class 'float'>
+3. exponential form is allowed
+    - eg x = 12.456e3   => 12.456*1000 = 12456
+4. Floating point no should be represented using decimal form no and not using octal, binary, hexadecimal
+    - e.g x = 0B011.01 (invalid)
+    - e.g x = 0o01745.0153 (invalid)
+    - e.g x = 0X011.018765a (invalid)
+
+
+### complex :-
+1. Complex numbers are specified as <real part>+<imaginary part>j.
+2. Can't use anything inplace of j in the imaginary part.
+    - eg.  x=2+3j   >>>  type(2+3j)   => <class 'complex'>
+3. - x = 3+5j   (valid)
+   - x = 5j+3   (valid) 
+4. Real part can be specified using Decimal, Binary, Octal, HexaDecimal but imginary part should be specified only using Decimal
+    - eg 12+5j       (Valid)
+    - eg 0b1101+5j   (Valid)
+    - eg 0o12451+5j  (Valid)
+    - eg 0X45A12+5j  (Valid)
+    - eg 12+0B11j    (inValid)
+    - eg 12+0o5j     (inValid)
+    - eg 12+0XA5j    (inValid)
+5. All mathematical operation except % (modulo) can be applied
+    - eg A=(5+4j), B=(7+3j) , A+B      (valid)
+    - eg A=(5+4j), B=(7+3j) , A-B      (valid)
+    - eg A=(5+4j), B=(7+3j) , A*B      (valid)
+    - eg A=(5+4j), B=(7+3j) , A/B      (valid)
+    - eg A=(5+4j), B=(7+3j) , A%B      (invalid)
+6. .real and .imag are the  predefined variable to get the real and imaginary part from the complex no.
+    - eg A = 4+6j   , c.real => 4.0 , c.imag => 6.0
+7. Internally the complex no is maintained as floating no
+    - eg. X = 40+5j  => (40+5j) but when you will try to get real and imag no using .real and .imag then it is represented as floating no.
+
+
+### bool :-
+1. To represent Truthiness.
+2. True and False are the value for bool (both start with capital letter)
+3. Internally python store int value for both
+    - eg True  => 1
+    - eg False => 0
+4. True + True   => 1 + 1 => 2
+5. True + False  => 1 + 0 => 1
+6. True - True   => 1 - 1 => 0
+7. False - True  => 0 - 1 => -1
+
+### str: -
+1. To represent any sequence of characters.
+2. There is nothing like char datatype everything is string if it is surrounded by '',"",'''''' (single,double,triple quotes).
+3. Trple quotes:- '''string''':
+    - To define multiple string literals.
+    - To use ' and " as symbols.
+4. Recomended to use '' single quotes as string , python also uses '' to represnt string.
+5. Python supports both +ve and -ve indexes.
+    -  +ve : forward direction
+    -  -ve : backward direction
+    - eg: S = 'Deepak'  =>  S[0]   => 'D'   =>  S[-1]  => 'k'
+
+
+## Slice Operator :-
+- The slice operator [n:m] returns the part of the string from the n’th character to the m’th character, including the first but excluding the last. 
+- In other words, start with the character at index n and go up to but do not include the character at index m. 
+- If you omit the first index (before the colon), the slice starts at the beginning of the string. If you omit the second index, the slice goes to the end of the string.
+- There is **no Index Out Of Range exception for a slice**. A slice is forgiving and shifts any offending index to something legal.
+- Two forms of sclice
+1. [startindex : end-1index]
+    - s[:4] => returns value at index 0,1,2,3
+    - s[:] => returns value from start to end index
+    - s[1:] => returns value from index 1 to last index
+    - if s has index till 5 and s[1:100] => returns value from index 1 to last if end index is greater than the total index of string, no outof range exception is raised
+    - s[-1:-3] is valid
+    
+2. [startindex : end-1index : step]
+    - default step value is 1
+    - step: is the no of character to skip
+    - s[2:5:2] => skips one character starting from 2 and returns value for index 2,4
+    - s[-1,-5,-1] => starts from -1 index and goes one step backward and returns value for -1,-2,-3,-4
+    - s[::-1] => reverses the string
+
+## Type Casting/ Type Coersion
+- int()
+- float()
+- bool()
+- str()
+- complex()
+
+1. **int()**
+- int(float): int(123.456) => 123
+- int(complex) : int(10+5j) => invalid complex to int not allowed  
+- int(bool) : int(True) => 1  (0 : for False)
+- int(string) : int("10") => valid 10 (string should be valid decimal integral)
+- int(string) : int("0B10") => invalid
+- int(string) : int("0o10") => invalid
+- int(string) : int("0X10") => invalid
+- int(string) : int("10.5") => invalid : not integral
+- we can convert any type to int except complex
+- we can convert str to int if and only if str is integral literal of base10
+
+2. **float()**
+- 
+
+
+
 
 
