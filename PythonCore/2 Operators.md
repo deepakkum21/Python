@@ -215,18 +215,21 @@ a = input('Enter value for a: ')
 ## Operator Precedence:-
 
 | **Sr.No.** |	**Operator** | **Description** |                                         
-| ---------- | ------------- | --------------- |                          
-| 1	         | **            | Exponentiation (raise to the power) |
-| 2        	 | ~ + -         | Complement, unary plus and minus (method names for the last two are +@ and -@) |
-| 3	         | * / % //      | Multiply, divide, modulo and floor division |
-| 4	         | + -           | Addition and subtraction |
-| 5	         | >> <<         | Right and left bitwise shift |
-| 6	         | &             | Bitwise 'AND' |
-| 7	         | ^ |           | Bitwise exclusive `OR' and regular `OR' |
-| 8	         | <= < > >=     | Comparison operators |
-| 9	         | <> == !=      | Equality operators |  
-| 10	     | = %= /= //= -= += *= **= | Assignment operators | 
-| 11	     | is is not     | Identity operators | 
-| 12	     | in not in     | Membership operators |
-| 13	     | not or and    | Logical operators |      
+| ---------- | ------------- | --------------- |    
+| 1	         | ()            | parenthesis |                      
+| 2	         | **            | Exponentiation (raise to the power) |
+| 3        	 | ~ + -         | Complement, unary plus and minus (method names for the last two are +@ and -@) |
+| 4	         | * / % //      | Multiply, divide, modulo and floor division |
+| 5	         | + -           | Addition and subtraction |
+| 6	         | >> <<         | Right and left bitwise shift |
+| 7	         | &             | Bitwise 'AND' |
+| 8	         | ^             | Bitwise exclusive `OR' and regular `OR' |
+| 9	         | <= < > >=     | Comparison operators |
+| 10         | <> == !=      | Equality operators |  
+| 11	     | = %= /= //= -= += *= **= | Assignment operators | 
+| 12	     | is is not     | Identity operators | 
+| 13	     | in not in     | Membership operators |
+| 14	     | not or and    | Logical operators |     
+
+ 
 
