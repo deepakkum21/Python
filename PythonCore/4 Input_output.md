@@ -35,3 +35,39 @@
     - test.py "Deepak kumar" 10 20
         - argv -> ['test.py', 'Deepak kumar', '10', '20']
     - **"" is compulsory if want to enter string having space** single quote('') will be treated as single string and after space will be treated as another string.
+
+
+
+## Output statement:-
+1. **print(str)**
+    - it has 2 attribute
+        - end: default value '\n' (eol)
+        - sep: default value (space ' ' )
+    - print('abc') => vaild
+    - print('xyz'+'bcs') => vaild
+    - print('vxa'*2) => vaild
+    - print(3*'yza') => vaild
+    - print('abc'+'abc') => vaild
+    - print('abc'+3) => invalid (while concatenation all operand should be string)
+    - print('abc'*'abc')  => invaild (while  * at least one should be int on the adjacent side of string )
+    - print('abc'*10 + 'abc') => valid
+    - print('hello','world') => valid (if multiple arg are there separated with , then in o/p => is separated with space( ))
+        - **defalut separator is space**
+    - print('hello','world',**sep=','**) => valid (hello,world)
+    - eg
+        - print('deepak')
+        - print('kumar') both will be printed in the different line because default value of end is '\n'
+        - print('deepak',end=' ')
+        - print('kumar') =>  deepak kumar
+    - **formatted print**
+        - %i ---> int
+        - %d ---> int
+        - %f ---> float
+        - %s ---> string
+        - print('formatted string' %(list of variables))
+        - eg a,b,c = 10,20,30   => print('a value of %i' %a)  -> a value is 10
+        - eg a,b,c = 10,20,30   => print('b value of %i and c value is %d' %(b,c))  -> b value is 20 and c value is 30
+    - **print with replacement operator**
+        - fisrtName = 'deepak'
+        - lastName = 'kumar'
+        - **print('{} your last name is {}'.format(firstName, lastName))** => deepak your last name is kumar
