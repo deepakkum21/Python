@@ -71,3 +71,7 @@
         - fisrtName = 'deepak'
         - lastName = 'kumar'
         - **print('{} your last name is {}'.format(firstName, lastName))** => deepak your last name is kumar
+        - **print('{0} your last name is {1}'.format(firstName, lastName))** => deepak your last name is kumar
+        - **print('{1} your last name is {0}'.format(lastName, firstName))** => deepak your last name is kumar
+        - **print('{x} your last name is {y}'.format(x=firstName, y=lastName))** => deepak your last name is kumar
+        
