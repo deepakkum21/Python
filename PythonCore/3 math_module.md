@@ -29,7 +29,7 @@
 | fsum(iterable |)	Returns an accurate floating point sum of values in the iterable |
 | isfinite(x) |	Returns True if x is neither an infinity nor a NaN (Not a Number) |
 | isinf(x) |	Returns True if x is a positive or negative infinity |
-| isnan(x) |	Returns True if x is a NaN |A
+| isnan(x) |	Returns True if x is a NaN |
 | ldexp(x, i) |	Returns x * (2**i) |
 | modf(x) |	Returns the fractional and integer parts of x |
 | trunc(x) |	Returns the truncated integer value of x |
