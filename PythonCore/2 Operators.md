@@ -124,7 +124,47 @@ Special operators
 ## Bitwise Operators: 
 1. Bitwise operator works on bits and performs bit by bit operation.
 2. Can be **only applied for Int and bool** types not for string type.
-3. & => if both bits are 1 then result is 1
-4. | => if at least one bit is one then result is 1
-5. ^ => if both bits are different then result is 1
-    
+3. & => **if both bits are 1 then result is 1**
+4. | => **if at least one bit is one then result is 1**
+5. ^ => **if both bits are different then result is 1**
+6. **~ (bitwise complement operator)** :-
+    - The most significant bit is sign bit
+    - 0 means +ve no.
+    - 1 means -ve no.
+    - +ve no will be directly represented in the memory.
+    - -ve no will be indirectly represented in the memory.
+        - by using 2's complement.
+    - 2's complement => first find 1's complement (interchanging 0 and 1) and then add 1.
+    - eg ~5 => -6
+        - in memory 5 is represented in 32 bit (00000000000000000000000000000101) => here 0 in MSB means +ve
+        - now we have to find complement means inverse so place 0 in place of 1 and vice versa
+        - now it will become 11111111111111111111111111111010 , here 1 in MSB means -ve no.
+        - since it is -ve no it has to be represented in the 2's complement form.
+        - (11111111111111111111111111111010) in 2's complement
+            - 1's complement of (11111111111111111111111111111010) => (100000000000000000000000000000101)
+            - now add 1 to (100000000000000000000000000000101) to get 2's complement => (100000000000000000000000000000101) + 1 => (100000000000000000000000000000110)
+            - since 1 is in MSB => -ve no and 110 =>  6 in total -6
+            - ~5 => -6
+            - ~-6 => 5
+            - ~10 => -11
+            - ~-56 => 55
+7. **shift (>>,<<) operator**:-
+    - Left shift (<<)  (x << y) :-
+        - this enables to shift y bits to the left 
+        - the vaccant bits to the right side is filled with 0
+        - eg 5 << 2
+        - (00000000000000000000000000000101) when shifted 2 bit left => (000000000000000000000000000101__)
+        - the vacant spaces are filled with 0 => (00000000000000000000000000010100)
+    - Right shift (>>)  (x >> y):-
+        - this enables to shift y bits to the right 
+        - the vaccant bits to the left side is filled with sign bit (i.e. if x is +ve it is filled with 0 , if x is -ve it is filled with 1)
+        - eg 5 >> 2
+        - (00000000000000000000000000000101) when shifted 2 bit right => (__000000000000000000000000000001)
+        - since 5 is +ve the vaccant bits are filled with 0
+8. Bitwise operator effect on bool type
+    - True & False => False ( & if both bits are 1 then 1) => 1 & 0 => 0 (False)
+    - True | False => True ( | if at least one bit is 1 then 1) => 1 | 0 => 1 (True)
+    - True ^ Fasle => True ( ^ if both bit are different the 1) => 1 ^ 0 => 1 (True)
+    - ~False => -1  ( ~False => ~0 => -1)
+    - ~True => -2  ( ~True => ~1 => -2)
+    - True>>2 => 0 ( True>>2 => 1>>2 => 0)
