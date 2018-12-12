@@ -14,4 +14,4 @@
     - **eval(expression, globals=None, locals=None)**
     - expression - this string as parsed and evaluated as a Python expression
     - globals (optional) - a dictionary
-    - Alocals (optional)- a mapping object. Dictionary is the standard and commonly used mapping type in Python.
+    - locals (optional)- a mapping object. Dictionary is the standard and commonly used mapping type in Python.
