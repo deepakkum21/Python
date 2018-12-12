@@ -183,7 +183,7 @@
         - x is y => return True if both x and y is pointing to the same object 
         - x==y => return True if both have same content                        
 
-        | **operator** | ** in Java**       | ** in python** |                                                   
+        | **operator** | **in Java**       | **in python** |                                                   
         | ------------ | ------------------------ | -------------------- |                                                                    
         | is(py) / .equals()-java | content comparision | address/ reference comparision     |                                            
         | ==           | address/ reference comparision | content comparision    |                            
@@ -197,3 +197,36 @@
     - **not in**
         - complement of in operator
         - x not in y => evaluates to False if x is the member of y
+
+## Ternary oerator imp:
+1. **a = b if condition else c**
+    - implies a will be equal to b if and only if the condition evaluates to True else a will be equal to c.
+
+
+## Taking Input from keyboard in Python.
+a = input('Enter value for a: ')                                                                                                                    
+**input() -> is used to take input from keyboard**
+- By default the type of a is string
+- if want in int convert it 
+    - a = int(input('Enter value for a: ') )
+    - eg find minimum among 3 no
+    - max = a if a < b and a < c else b if b < c else c   
+
+## Operator Precedence:-
+
+| **Sr.No.** |	**Operator** | **Description** |                                         
+| ---------- | ------------- | --------------- |                          
+| 1	         | **            | Exponentiation (raise to the power) |
+| 2        	 | ~ + -         | Complement, unary plus and minus (method names for the last two are +@ and -@) |
+| 3	         | * / % //      | Multiply, divide, modulo and floor division |
+| 4	         | + -           | Addition and subtraction |
+| 5	         | >> <<         | Right and left bitwise shift |
+| 6	         | &             | Bitwise 'AND' |
+| 7	         | ^ |           | Bitwise exclusive `OR' and regular `OR' |
+| 8	         | <= < > >=     | Comparison operators |
+| 9	         | <> == !=      | Equality operators |  
+| 10	     | = %= /= //= -= += *= **= | Assignment operators | 
+| 11	     | is is not     | Identity operators | 
+| 12	     | in not in     | Membership operators |
+| 13	     | not or and    | Logical operators |      
+

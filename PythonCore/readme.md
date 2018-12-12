@@ -417,7 +417,12 @@ more info:-(https://realpython.com/python-data-types/)
 **constant concept is not applicable in python**
 
 
-
+## Taking Input from keyboard in Python.
+a = input('Enter value for a: ')                                                                                                           
+**input() -> is used to take input from keyboard**                             
+- By default the type of a is string
+- if want in int convert it 
+    - a = int(input('Enter value for a: ') )
 
 
 
