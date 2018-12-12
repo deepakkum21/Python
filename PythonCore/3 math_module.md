@@ -2,8 +2,12 @@
 ## Import
 1. import math 
 2. import math as m
-3. from math import sqrt
+3. from math import sqrt, floor
 4. from math import sqrt as s
+
+### dir()
+1. dir() : returns list of all members of current module
+2. dir(moduleName) : returns list of all members of the specified module
 
 ## Imp math module constant 
 - pi
@@ -13,19 +17,19 @@
 
 ## Imp Math module function:                                  
  
-| **Function** |	**Description** |                                             
-| ------------ | ------------------ |                    
-| ceil(x) |	Returns the smallest integer greater than or equal to x. |
+| **Function** |	**Description** |  **example** |                                                                      
+| ------------ | ------------------ | ------------ |                   
+| ceil(x) |	Returns the smallest integer greater than or equal to x. | ceil(10.1) => 11 |
 | copysign(x, y) |	Returns x with the sign of y |
 | fabs(x) |	Returns the absolute value of x |
 | factorial(x) |	Returns the factorial of x |
-| floor(x) |	Returns the largest integer less than or equal to x |
+| floor(x) |	Returns the largest integer less than or equal to x | floor(10.1) => 10 |
 | fmod(x, y) |	Returns the remainder when x is divided by y |
 | frexp(x) |	Returns the mantissa and exponent of x as the pair (m, e) |
 | fsum(iterable |)	Returns an accurate floating point sum of values in the iterable |
 | isfinite(x) |	Returns True if x is neither an infinity nor a NaN (Not a Number) |
 | isinf(x) |	Returns True if x is a positive or negative infinity |
-| isnan(x) |	Returns True if x is a NaN |
+| isnan(x) |	Returns True if x is a NaN |A
 | ldexp(x, i) |	Returns x * (2**i) |
 | modf(x) |	Returns the fractional and integer parts of x |
 | trunc(x) |	Returns the truncated integer value of x |
