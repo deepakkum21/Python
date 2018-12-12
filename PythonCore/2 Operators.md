@@ -1,10 +1,10 @@
 # Python Operators
-Arithmetic operators
-Relational operators / comparison operators
-Logical operators
-Bitwise operators
-Assignment operators
-Special operators
+- Arithmetic operators
+- Relational operators / comparison operators
+- Logical operators
+- Bitwise operators
+- Assignment operators
+- Special operators
 
 ## Arithmetic operators: -                                                                            
 | **Operator** |	**Description** |	**Example** |                                                         
@@ -168,3 +168,32 @@ Special operators
     - ~False => -1  ( ~False => ~0 => -1)
     - ~True => -2  ( ~True => ~1 => -2)
     - True>>2 => 0 ( True>>2 => 1>>2 => 0)
+
+
+## Assignment Operator: -
+1. increment (++x, x++) and decrement operator are not allowed in python
+2. but (++x), (--x) => vaild (because it treates as (+ (+(x))) same for --x)
+3. compound operators like -=, *=, /=, //=, &=, %=, |=, >>=, <<=, **=, ^=
+
+
+## Special Operators:- 
+1. **Identity Operators (is , is not)**
+    - **is => (addess/ refrence comparision**
+        - == => content comparision
+        - x is y => return True if both x and y is pointing to the same object 
+        - x==y => return True if both have same content                        
+
+        | **operator** | ** in Java**       | ** in python** |                                                   
+        | ------------ | ------------------------ | -------------------- |                                                                    
+        | is(py) / .equals()-java | content comparision | address/ reference comparision     |                                            
+        | ==           | address/ reference comparision | content comparision    |                            
+
+    - **is not**
+        - complement of is
+
+2. **Membership Operators (in , not in)**
+    - **in**
+        - x in y => evaluates to True if x is the member of y
+    - **not in**
+        - complement of in operator
+        - x not in y => evaluates to False if x is the member of y
