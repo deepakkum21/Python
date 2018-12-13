@@ -39,12 +39,12 @@
 
 | **List Methods** | **Description** | **Example listvar.methodName()** |                                                                                           
 | ---------------- | --------------- | -------------------------------- |                                                                              
-| append() | Add an element to the end of the list |            |          
-| extend() | Add all elements of a list to the another list |            |          
-| insert() | Insert an item at the defined index |            |          
-| remove() | Removes an item from the list |            |          
-| pop() | Removes and returns an element at the given index |            |          
-| clear() | Removes all items from the list |            |          
+| append() | Add an element to the end of the list |    listvar.append(value_to_be_inserted_to_list)        |          
+| extend() | Add all elements of a sequence to the another list. Takes only one arg |   listvar.extend(sequenceVar)  -> sequenceVar: can be string, list, tuple, set       |
+| insert() | Insert an item at the defined index |  listvar.insert(index, value_to_be_inserted_to_list)          |          
+| remove() | Removes an item from the list. If the specified value  which is needed to be removed, will get error . If multiple occurrences of that specified value is there then only first occurred value will be removed|  listvar.remove(value_to_be_removed_to_list)  | 
+| pop() | Removes and returns an element at the given index. if index not specified it will take last index as argument. list length should not be zero otherwise error | listvar.pop() -> removes and return last value of list ,  listVar.pop(index) -> removes and return value at specified index  |    
+| clear() | Removes all items from the list. Makes list Empty |    listVar.clear()        |          
 | index() | Returns the index of the first matched item |            |          
 | count() | Returns the count of number of items passed as an argument |            |          
 | sort() | Sort items in a list in ascending order |            |          
