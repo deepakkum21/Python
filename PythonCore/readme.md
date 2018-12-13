@@ -291,7 +291,8 @@ more info:-(https://realpython.com/python-data-types/)
 4. To add key-value in existing dict
     eg: p = {101:'deepak'}   =>  p[key] = value  => p[102] = 'abc'   => p  => {101:'deepak', 102:'abc'}
 5. it is **mutable**
-6. if trying to add duplicate key but value is different , wouldn't give erroe but it will override the previous value with the new value for that key which was duplicate.
+6. Insertion order not preserved.
+7. if trying to add duplicate key but value is different , wouldn't give erroe but it will override the previous value with the new value for that key which was duplicate.
 
 ### range: -
 1. To represent sequence of numbers.
