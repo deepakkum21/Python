@@ -233,7 +233,7 @@ more info:-(https://realpython.com/python-data-types/)
 5. It is **mutable**
 
 ### list[]: - 
-1. To represent group of individual object.
+1. To represent group of individual object as a single entity.
 2. Insertion order is preserved.
 3. Duplicate object are allowed.
 4. Hetrogeneous objects are allowed.
@@ -243,7 +243,7 @@ more info:-(https://realpython.com/python-data-types/)
     - .remove() -> to decrease the size
 
 ### tuple(): -
-1. To represent group of individual object.
+1. To represent group of individual object as a single entity.
 2. Insertion order is preserved.
 3. Duplicate object are allowed.
 4. Hetrogeneous objects are allowed.

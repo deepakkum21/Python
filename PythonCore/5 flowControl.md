@@ -44,8 +44,8 @@ These decide the order in which the statement will be executed
         - Whenever block is defined it is always expecting some functionality but there might be situation when we are not in a situation to define or would want to define it in the future then in the body of block we can mention it as pass.
         - statement following after pass keyword in the asme block will also be executed  
         - It can be used in class, function, control statement 
-        - class passExample:
-        -       pass 
+        -     class passExample:
+        -         pass 
     
 
 ## else conditional statement with loop (for, while)
