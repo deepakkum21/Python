@@ -27,7 +27,7 @@ These decide the order in which the statement will be executed
 - When want to tranfer the control from one statement to other
     - **break**
         - based on some sondition when want to break the loop execution
-        -    for i in range(10) : 
+        -     for i in range(10) : 
         -       if(i==6):
         -           break
         -       print(i,end=' ')
@@ -59,9 +59,9 @@ https://www.geeksforgeeks.org/using-else-conditional-statement-with-for-loop-in-
 - After del, automatically the corresponding object is elligble for garbage collection (GC).
 - Garbage Collector is responsible to destroy objects, **del job is only to delete the vaiable (not to delete object)** and make it eligible for GC.
 - eg
-    - l = [10,20,3,0]
-    - del(l[0])  or  del l[0]   => l => [20,30]
-    - del(l)     or  del l      => l => error
+    - var = [10,20,3,0]
+    - del(var[0])  or  del var[0]   => var => [20,30]
+    - del(var)     or  del var      => var => error
 
 | **del var or del(var)** | **var = None** |                                                       
 | ----------------------- | -------------- |                                                                                  
