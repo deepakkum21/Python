@@ -47,10 +47,20 @@
 | clear() | Removes all items from the list. Makes list Empty |    listVar.clear()        |          
 | index() | Returns the index of the first matched item |            |          
 | count() | Returns the count of number of items passed as an argument |            |          
-| sort() | Sort items in a list in ascending order |            |          
-| reverse() | Reverse the order of items in the list |            |          
-| copy() | Returns a shallow copy of the list |            |        
+| sort() | Sort items in a list in ascending order . if desecending order in needed sort(reverse=True) |  listVar.sort() -> asc , listVar.sort(reverse=True) -> desc |
+| reverse() | Reverse the order of items in the list |   listVar.reverse()         |          
+| copy() | Returns a shallow copy of the list |            |  
 
+
+| **reverse()** | **reversed()** |                                                                                                                  
+| ------------- | -------------- |                                                                                           
+| it is list specific method | it is python in-built method |                
+| it returns a list by reversing the order of elements present in the list | it returns a object which has reversed elements but to get those elements using loop |  
+
+| **sort()** | **sorted()** |                                                                                                                  
+| ---------- | ------------ |        
+| it is list specific method | it is python in-built method |            
+| it returns a list by sorting it in ascending order | it also returns a list by sorting it in ascending order |  
 
 ## Methods which take list as arg:-
 
