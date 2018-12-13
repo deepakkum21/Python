@@ -38,7 +38,7 @@
 ## Python list methods:
 
 | **List Methods** | **Description** | **Example listvar.methodName()** |                                                                                           
-| ---------------- | --------------- | -------------------------------- |                                                                              |
+| ---------------- | --------------- | -------------------------------- |                                                                              
 | append() | Add an element to the end of the list |            |          
 | extend() | Add all elements of a list to the another list |            |          
 | insert() | Insert an item at the defined index |            |          
