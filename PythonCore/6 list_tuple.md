@@ -99,7 +99,7 @@
     - **copy()**
         - Returns a shallow copy of the list .
         - This will create a different object with same elements
-    - **slice[begin:end:step]** (default value: begin=1, end=len, step=1)
+    - **slice[begin: end: step]** (default value: begin=1, end=len, step=1)
         - This will return a new list with elements from begin to end-1
 
 ### Mathematical operators for list object ( + , *)
