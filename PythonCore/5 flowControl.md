@@ -2,7 +2,9 @@
 These decide the order in which the statement will be executed
 1. Selection statement (if,elif,if else)
 2. Iterartive statement (for, while )
-3. Transfer statement (pass, continue, break)
+3. Transfer statement (pass, continue, break)                          
+
+
 
 1. **Selection Statement**
 - when decision is made on some criteria.
@@ -20,3 +22,14 @@ These decide the order in which the statement will be executed
         - as long as the condition is true
         - when donot know the no of iteration in advance
         -  while condition : body
+
+3. **Transfer Statement**
+- When want to tranfer the control from one statement to other
+    - **break**
+        - based on some sondition when want to break the loop execution
+        - eg for i in range(10) : 
+        -       if(i==6):
+        -           break
+        -       print(i)
+        - 
+        
