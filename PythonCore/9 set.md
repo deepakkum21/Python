@@ -15,6 +15,7 @@
 9. s = {} is dict not set
 10. To create empty set 
     **emptySet = set()**    
+11. ***Aliasing and cloning ( copy() ) is applicable*** for set same as list.
 
 ### How to create a set?
 1. **emptySet = set()**  
@@ -92,7 +93,8 @@
 | symmetric_difference() | 	Returns the symmetric difference of two sets as a new set | 
 | symmetric_difference_update() | 	Updates a set with the symmetric difference of itself and another | 
 | union() | 	Returns the union of sets in a new set | 
-| update() | 	Updates the set with the union of itself and others |   
+| update() | 	Updates the set with the union of itself and others. this method can take **list,set,or any sequence and will add** . Any no of arg can be passed and will only take sequence |   
+
 
 ### Built-in methods which take set as arg
 
@@ -106,3 +108,14 @@
 | min() |  	Return the smallest item in the set. |  
 | sorted() |  	Return a new sorted list from elements in the set(does not sort the set itself). |  
 | sum() |  	Retrun the sum of all elements in the set. |  
+
+
+## set Comprehension 
+1. setVar = {x for x in range(1,11)}   => setVar = {1,2,3,4,5,6,7,8,9,10}
+2. can also perform extra activity
+    - setVar = {x for x in range(1,11) if x%2}             
+3. syntax: **{expression for x in sequence condition}**
+    - to get set of values present in both set l1 and l2
+        - {x for x in l1 if x in l2}
+    - to get set of values present in set l1 but not in list l2
+        - {x for x in l1 if x not in l2}

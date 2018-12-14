@@ -45,7 +45,7 @@
 | pop(key[,d]) |	Remove the item with key and return its value or d if key is not found. If d is not provided and key is not found, raises KeyError. |
 | popitem() |	Remove and return an arbitary item (key, value). Raises KeyError if the dictionary is empty. |
 | setdefault(key[,d]) |	If key is in the dictionary, return its value. If not, insert key with a value of d and return d (defaults to None). |
-| update([other]) |	Update the dictionary with the key/value pairs from other, overwriting existing keys. |
+| update([other]) |	Update the dictionary with the key/value pairs from other, overwriting existing keys. accepts only one arg. |
 | values() |	Return a new view of the dictionary's values |                         
 
 ### Built in function that take dict as arg
@@ -57,3 +57,15 @@
 | len() | 	Return the length (the number of items) in the dictionary. | 
 | cmp() | 	Compares items of two dictionaries. | 
 | sorted() | 	Return a new sorted list of keys in the dictionary. | 
+
+### dict comprehension: 
+1. Dictionary comprehension is an elegant and concise way to create new dictionary from an iterable in Python.
+2. consists of an expression pair (key: value) followed by for statement inside curly braces {}.
+    - **{x: x*x for x in range(6)}**   => return dict
+3. A dictionary comprehension can optionally contain more for or if statements.
+    - **odd_squares = {x: x*x for x in range(11) if x%2 == 1}**
+
+
+### Dictionary Membership
+1. **in**
+    - can test if a key is in a dictionary or not using the keyword in , but not for values.
