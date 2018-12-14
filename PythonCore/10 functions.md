@@ -44,6 +44,7 @@ Once we have defined a function, we can **call it from another function, program
 - keyword
 - default
 - var-arg
+- keyword-var agr
 
 1. **positional arg**
 - order of arguments is imortant
@@ -68,4 +69,59 @@ Once we have defined a function, we can **call it from another function, program
 
 3. **default arg**
 - default arg should be placed in the last, i.e. after all non-default arg
-- 
+-            def sumOfNo(num1, num2=10, num3): pass   => invalid
+-            def sumOfNo(num1, num2, num3=15): pass   => valid
+
+4. **var-arg**
+- when we have to pass any no of arg (zero - any)
+- * is prefixed with the argname  function_name(*argName)
+- internally the *arg is tuple.
+- if var-arg parameter is given first and then positional arg then , compulsory positional arg has to be called using keyword arg
+-           def varArgFunction(*arg, name): pass
+-           varArgFunction(1,2,3,4, name='deepak')    => vaild
+-           varArgFunction('deepak' ,1,2,3,4)    => invaild   (gets confused which parameter is for what)
+-           def varArgFunction(*arg): pass
+-           varArgFunction(1,2,3,4)        => valid  
+-           varArgFunction()               => valid
+-           varArgFunction (7)             => valid
+-           varArgFunction (7,6)           => valid
+
+5. **Keyword-var-arg**
+- When want to pass argument as key and value fun_name(name='deepak', city='chennai') and want name and city to be treated as key and associated value as value for the key.
+- **should be prefixed with the arg => func_name( **keyvararg)
+-           def keyVarArg(**arg): pass
+-           keyVarArg(name='deepak', city='chennai') 
+
+
+## Recurcive Function
+- Recursion is the process of defining something in terms of itself.
+    - **real worl eg** =>  two parallel mirrors facing each other. Any object in between them would be reflected recursively.
+- Function calling itself 
+    - find the factorial of an integer.
+- Every recursive function **must have a base condition that stops the recursion** or else the function calls itself infinitely.
+- **Advantages of Recursion**
+    - Recursive functions make the code look clean and elegant.
+    - A complex task can be broken down into simpler sub-problems using recursion.
+    - Sequence generation is easier with recursion than using some nested iteration.
+- **Disadvantages of Recursion**
+    - Sometimes the logic behind recursion is hard to follow through.
+    - Recursive calls are expensive (inefficient) as they take up a lot of memory and time.
+    - Recursive functions are hard to debug.
+
+
+## Anonymous function/ lambda function
+1. function that is defined without a name.
+2. normal functions are defined using the def keyword, in Python **anonymous functions are defined using the lambda keyword**.
+3. **use** => instant or one-time usage purpose , anonymous or lambda function is created
+4. syntax   **lambda arguments: expression**
+5. **Use of Lambda Function in python**
+    - generally it is used **as an argument to a higher-order function** (a function that takes in other functions as arguments). Lambda functions are **used along with built-in functions like filter(), map(), reduce()** etc.
+    - filter() function in Python takes in a function and a list as arguments, return filter type object.
+        - **new_list = list(filter(lambda x: (x%2 == 0) , my_list))**
+    - map() function in Python takes in a function and a list, return map type object..
+    - returns same no of elements as the no of the lements were in the list which was passed as arg.
+        - **new_list = list(map(lambda x: x * 2 , my_list))**
+
+## Nested Function:
+
+
