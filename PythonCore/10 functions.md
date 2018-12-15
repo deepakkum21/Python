@@ -123,5 +123,58 @@ Once we have defined a function, we can **call it from another function, program
         - **new_list = list(map(lambda x: x * 2 , my_list))**
 
 ## Nested Function:
+- When the functionality is required within the function.
+-       def outer():
+-               def inner(a,b):
+-                   return a+b
+-               inner(5,10)
+-               inner(4,9)
+- A function can return function 
+-       def outer():
+-               def inner(a,b):
+-                   return a+b
+-               inner(5,10)
+-               return inner      // returning a function
+- A function can take function as arg
+    - filter(lambda function , argList), map(lambda function , argList)
+- **if want to xecute inner() then the outer function must reurn inner()**
+- f= functionname()  -> calling function with functionname
+- f= functionname    -> giving alias to the function with functionname 
 
 
+## higher order functions
+1. Function that take other functions as arguments
+        def inc(x):
+            return x + 1
+
+        def dec(x):
+            return x - 1
+
+        def operate(func, x):
+            result = func(x)
+            return result
+        operate(inc,3)
+        operate(dec,3)
+
+## Function Decorator
+1. A decorator takes in a function, adds some functionality and returns it.
+2. **add functionality to an existing code**
+3. It help us to make our code shorter and more pythonic.
+4. **@deco-function-name is added as the anotation whose decorator is created with deco-function-name
+    - eg
+    -           def decofunction(func):
+    -                def innerfun(name):
+    -                   if(name='deepak'):
+    -                       print('Deepak name got')
+    -                   else:
+    -                       func(name)
+    -               return innerfunc
+    -           @decofunction
+    -           def functobedecorated(name):
+    -               print('deepak name was not there')
+    -           functobedecorated('abc')
+    -           functobedecorated('deepak')
+5. When @deco-function-name is used as a anotation for any function then automatically decorator function is clled on be half of it.
+6. When want to call manually
+    - then **decorRef = deco-function-name(functobedecorated)**
+    - decorRef will now hold decofunction as alias
