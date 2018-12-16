@@ -178,3 +178,24 @@ Once we have defined a function, we can **call it from another function, program
 6. When want to call manually
     - then **decorRef = deco-function-name(functobedecorated)**
     - decorRef will now hold decofunction as alias
+7. **Chaining Decorators in Python**
+- function can be decorated multiple times with different (or same) decorators. 
+-                def star(func):
+-                   def inner(*args, **kwargs):
+-                       print("*" * 30)
+-                       func(*args, **kwargs)
+-                       print("*" * 30)
+-                   return inner
+- 
+-                def percent(func):
+-                   def inner(*args, **kwargs):
+-                       print("%" * 30)
+-                       func(*args, **kwargs)
+-                       print("%" * 30)
+-                   return inner
+- 
+-               @star
+-               @percent
+-               def printer(msg):
+-                   print(msg)
+-               printer("Hello")    
