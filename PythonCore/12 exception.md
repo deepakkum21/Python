@@ -17,4 +17,4 @@
             else:
                 print('Your age correct for getting married')
 
-![user-defined-exzception]()
+![user-defined-exzception](https://github.com/deepakkum21/Python/blob/master/PythonCore/images/user-defined-exception.PNG)
