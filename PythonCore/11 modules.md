@@ -34,7 +34,7 @@
 
 ## Reloading a Module
 1. For every module .PYC file will be generated which is the compile form of .py file.
-2. These .pyc file are stored in the **__pycache__**
+2. These .pyc file are stored in the **__ pycache__**
 3. The Python interpreter imports a module only once during a session
 4. In python it doesn't matter how many times a module is being loaded or imported, a module will be imported i.e loaded only one time.
 5. The feature of module getting loaded only once irrespective of no. of times module is being loaded, 
@@ -51,4 +51,5 @@
 2. dir()    => list of members of a current module
 3. dir(module-name)    => list of members of a module-name module
 4. some of the default members present in every module are:-
-    - '__builtins__','__cached__','__doc__','__file__','__initializing__','__loader__','__name__','__package__',
+    - '__ builtins__','__ cached__','__ doc__','__ file__','__ initializing__','__ loader__','__ name__','__ package__',
+5. the __ name__ attribute contains **the name of the module**.
