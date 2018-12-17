@@ -53,3 +53,28 @@
 4. some of the default members present in every module are:-
     - '__ builtins__','__ cached__','__ doc__','__ file__','__ initializing__','__ loader__','__ name__','__ package__',
 5. the __ name__ attribute contains **the name of the module**.
+
+
+## help for any module
+1. **help(module-name)** to get help for any module
+2. this will give list of methods present in the module
+
+
+## Random module
+1. this module has function called random() 
+    - which generates a **random float no from 0 to 1 (not inclusive 0<x<1**
+2. **randint(from, to)**
+    - it is going to generate random value from(1st arg) to (2nd arg) 
+    - it will return a no 1<=x<=100
+3. **uniform(from, to)**
+    - it is going to generate random float value from(1st arg) to (2nd arg) 
+    - it will return a random float value (1<x<100 ) (1 and 100 are exclusive)
+4. **randrange(from, to, step)**
+    - default values:-
+        - from:- 1
+        - step:- 1
+    - from value = from-1
+    - it returns a random int
+5. **choice(sequence)**
+    - sequence is a mandatory parameter that can be a list, tuple, or string.
+    - choice(sequence) returns a random object. 
