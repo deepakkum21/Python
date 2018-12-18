@@ -35,12 +35,13 @@
     - inside contructor by using class name
     - inside instance method by using class name
     - by using class method
-        @classmethod
-        def method_class(self):
-            self.d=40       (static var)
-            className.e=50       (static var)
+        -        @classmethod
+        -        def method_class(self):
+        -            self.d=40       (static var)
+        -            className.e=50       (static var)
     - by using static method
-        @staticmethod
-        def method_name():
-            className.var=value
+        -        @staticmethod
+        -        def method_name():
+        -            className.var=value
+
     
