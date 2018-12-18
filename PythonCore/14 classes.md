@@ -40,8 +40,8 @@
         -            self.d=40       (static var)
         -            className.e=50       (static var)
     - by using static method
-        -        @staticmethod
-        -        def method_name():
-        -            className.var=value
+        -        @staticmethod                                                                                          
+                 def method_name():                                                                
+                     className.var=value                                                  
 
-    
+### 
