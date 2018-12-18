@@ -51,7 +51,7 @@
 | count() | Returns the count of number of items passed as an argument |            |          
 | sort() | Sort items in a list in ascending order . if desecending order in needed sort(reverse=True) |  listVar.sort() -> asc , listVar.sort(reverse=True) -> desc |
 | reverse() | Reverse the order of items in the list |   listVar.reverse()         |          
-| copy() | Returns a shallow copy of the list .This will create a different object with same elements |  listVar.copy()          |  
+| copy() | Returns a **shallow copy** of the list .This will create a different object with same elements |  listVar.copy()          |  
 
 
 | **reverse()** | **reversed()** |                                                                                                                  
