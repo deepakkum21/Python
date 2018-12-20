@@ -73,7 +73,7 @@
 |                              
 
 **eg of match()**
-                import re
+-               import re
                 inputstring = input('Enter the pattern to check: ')
                 matchstring = re.match(inputstring, 'abhfbcmbkakbca')
                 if matchstring != None:
@@ -82,7 +82,7 @@
                     print('Didn't found the match string')
 
 **eg of fullmatch()**
-                import re
+-               import re
                 inputstring = input('Enter the pattern to check: ')
                 matchstring = re.fullmatch(inputstring, 'abhfbcmbkakbca')
                 if matchstring != None:
@@ -91,7 +91,7 @@
                     print('Didn't found the full match string')                
 
 **eg of search()**
-                import re
+-               import re
                 inputstring = input('Enter the pattern to check: ')
                 matchstring = re.search(inputstring, 'abhfbcmbkakbca')
                 if matchstring != None:
