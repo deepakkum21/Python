@@ -8,7 +8,7 @@
     - Pattern-composition etc 
 - **re module** is used
 
-### Application of ----------
+### Application of RE :-
 - Validations
 - Pattern Matching
 - Translators like interpreters, assemblers, compilers
@@ -50,8 +50,8 @@
 | \S | anything except a space equivalent to [^ \t\n\r\f\v] |
 | \d | any digit equivalent to [0-9]. |
 | \D | except digit equivalent to [^0-9].|
-| \w | letters ( Match alphanumeric character, including "_") equivalent to [a-zA-Z0-9_] |
-| \W | Matches any character which is not a word character equivalent to [^a-zA-Z0-9_] | 
+| \w | letters ( Match alphanumeric character, including ' _ ') equivalent to [a-zA-Z0-9_ ] |
+| \W | Matches any character which is not a word character equivalent to [^a-zA-Z0-9_ ] | 
 | .  | matches every character |     
 
 | **Quantifiers** | **Description** |                                                                               
@@ -63,3 +63,38 @@
 | a{m,n} | minimum m no of a and maxixmum n no of a | 
 | ^a | check whether the string start with a or not | 
 | a$ | check whether the string ends with a or not | 
+
+
+
+| **Imp RE functions** | **Description** |         
+| -------------------- | --------------- |                                                                                                    
+| match() | to check the given pattern at the beginning of the string . if then returns  corresponding match object Else it returns None, if the string does not match the given pattern. | 
+| fullmatch() | to check the given pattern matches with the whole target string if then returns  corresponding match object Else it returns None |                    | search() | scan through the given string/sequence looking for the first location where the regular expression produces a match. It returns a corresponding match object of the first occurrence if found, else returns None  | 
+|                              
+
+**eg of match()**
+                import re
+                inputstring = input('Enter the pattern to check: ')
+                matchstring = re.match(inputstring, 'abhfbcmbkakbca')
+                if matchstring != None:
+                    print('Found the match string at the beginning of the target string using match() at starting index: {} and end index: {}'.format(matchstring.start, matchstring.end()-1))
+                else:
+                    print('Didn't found the match string')
+
+**eg of fullmatch()**
+                import re
+                inputstring = input('Enter the pattern to check: ')
+                matchstring = re.fullmatch(inputstring, 'abhfbcmbkakbca')
+                if matchstring != None:
+                    print('Found the full match string )
+                else:
+                    print('Didn't found the full match string')                
+
+**eg of search()**
+                import re
+                inputstring = input('Enter the pattern to check: ')
+                matchstring = re.search(inputstring, 'abhfbcmbkakbca')
+                if matchstring != None:
+                    print('Found the full match string )
+                else:
+                    print('Didn't found the full match string')                                    
