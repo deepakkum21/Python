@@ -70,7 +70,9 @@
 | -------------------- | --------------- |                                                                                                    
 | match() | to check the given pattern at the beginning of the string . if then returns  corresponding match object Else it returns None, if the string does not match the given pattern. | 
 | fullmatch() | to check the given pattern matches with the whole target string if then returns  corresponding match object Else it returns None |                    | search() | scan through the given string/sequence looking for the first location where the regular expression produces a match. It returns a corresponding match object of the first occurrence if found, else returns None  | 
-|                              
+| findall() | it returns a list having all the items which are matched |   
+| finditer() | it returns iterator of matched objects |
+
 
 **eg of match()**
 -               import re
@@ -97,4 +99,18 @@
                 if matchstring != None:
                     print('Found the full match string )
                 else:
-                    print('Didn't found the full match string')                                    
+                    print('Didn't found the full match string')    
+
+
+**eg of findall()**
+-               import re
+                matchlist = re.findall('[0-9], '86fgd0ghgf34534')
+                print(matchlist)          
+
+**eg of finditer()**
+-               import re
+                inputstring = input('Enter the pattern to check: ')
+                matchiter = re.finiter(inputstring, 'abhfbcmbkakbca')
+                for match in matchiter:
+                    print(type(match))
+                    print                             
