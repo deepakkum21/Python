@@ -75,7 +75,6 @@
 | sub() | It returns the string obtained by replacing or substituting the leftmost non-overlapping occurrences of pattern in string by the replacement repl. If the pattern is not found then the string is returned unchanged. | 
 | subn() | same operation as sub(), but return a tuple (new_string, number_of_subs_made). |  
 | split() | Split string by the occurrences of pattern. If capturing parentheses are used in pattern, then the text of all groups in the pattern are also returned as part of the resulting list. If maxsplit is nonzero, at most maxsplit splits occur, and the remainder of the string is returned as the final element of the list. |
-| 
 
 
 **eg of match()**
