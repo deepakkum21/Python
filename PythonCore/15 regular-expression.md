@@ -72,6 +72,10 @@
 | fullmatch() | to check the given pattern matches with the whole target string if then returns  corresponding match object Else it returns None |                    | search() | scan through the given string/sequence looking for the first location where the regular expression produces a match. It returns a corresponding match object of the first occurrence if found, else returns None  | 
 | findall() | it returns a list having all the items which are matched |   
 | finditer() | it returns iterator of matched objects |
+| sub() | It returns the string obtained by replacing or substituting the leftmost non-overlapping occurrences of pattern in string by the replacement repl. If the pattern is not found then the string is returned unchanged. | 
+| subn() | same operation as sub(), but return a tuple (new_string, number_of_subs_made). |  
+| split() | Split string by the occurrences of pattern. If capturing parentheses are used in pattern, then the text of all groups in the pattern are also returned as part of the resulting list. If maxsplit is nonzero, at most maxsplit splits occur, and the remainder of the string is returned as the final element of the list. |
+| 
 
 
 **eg of match()**
@@ -113,4 +117,60 @@
                 matchiter = re.finiter(inputstring, 'abhfbcmbkakbca')
                 for match in matchiter:
                     print(type(match))
-                    print                             
+                    print(maych)   
+
+**eg of sub(pattern, repl, string, count=0, flags=0)**
+-               import re
+                inputstring = input('Enter the pattern to replace: ')
+                targetstring = input('Enter the Target String : ')
+                replacedString = re.sub(inputstring, '#', targetstring)
+                print(replacedString)    
+
+**eg of subn(pattern, repl, string, count=0, flags=0)**
+-               import re
+                inputstring = input('Enter the pattern to replace: ')
+                targetstring = input('Enter the Target String : ')
+                resultTuple = re.sub(inputstring, '#', targetstring)
+                print(resultTuple)   
+                print('The result string' + resultTuple[0]) 
+                print('The no of replacements' + resultTuple[1]) 
+
+**eg of split(pattern, string, maxsplit=0, flags=0)**
+-               stringList = re.split('-', 'deepak-kumar')    
+
+**eg of valid 10, 11, 12, 13 digit mb no**
+-               print(re.fullmatch('(0|91|\+91)?[6-9]\d{9}',input('ENETER THE MB NO.')))
+
+**To extract all mb no from a .txt file**
+-               import re
+                file1 = open('input.txt', 'r')
+                file2 = open('output.txt', 'w')
+                for line in file2:
+                    lineresultlist = re.findall('[6-9]\d{9}, line)
+                    for item in lineresultlist:
+                        file2.write(item + '\n')
+                print('Extracted all valid mb no from input file and witten to output file')
+                file1.close()
+                file2.close()
+
+**eg of web scrapping to find title**
+-               import re, urllib
+                import urllib.request
+                sites = ['https://goggle.com', 'https://facebook.com']
+                for site in sites:
+                    print('searching......', site)
+                    u = urllib.request.urlopen(site)
+                    textVersion = u.read()
+                    title = re.findall("<titel>.*</title>", str(textVersion), re.IGNORECASE)
+                    print(title)
+
+**eg of web scrapping to find all valid mb no from redbus.in**
+-               import re, urllib
+                import urllib.request    
+                u = urllib.request.urlopen(site)
+                textVersion = u.read()                
+                numberlist = re.findall('[0-9]{3,4}[- ][0-9]+', textVersion)
+                for number in numbers:
+                    print(number)
+
+

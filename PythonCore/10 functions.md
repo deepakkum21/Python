@@ -59,18 +59,18 @@ Once we have defined a function, we can **call it from another function, program
 - no of arg passed thrugh function calling should match no of parameters of function defined.
 - can mix positional with keyword arg but **positional arg should be first the keyword agv**
 -           def sumOfNo(num1, num2, num3):
--               sum = num1+num2+num3
--               return sum
--           sumOfNo(num2=5, num1=6, num3=8)    => keyword arg eg
--           sumOfNo(num2=5, 6, 8)       => invalid
--           sumOfNo(5, 6, num3=8)       => valid
--           sumOfNo(5, num2=6, num3=8)  => valid
--           sumOfNo(5, num1=6, 8)       => invalid  (num2 got multiple values)
+                sum = num1+num2+num3
+                return sum
+            sumOfNo(num2=5, num1=6, num3=8)    => keyword arg eg
+            sumOfNo(num2=5, 6, 8)       => invalid
+            sumOfNo(5, 6, num3=8)       => valid
+            sumOfNo(5, num2=6, num3=8)  => valid
+            sumOfNo(5, num1=6, 8)       => invalid  (num2 got multiple values)
 
 3. **default arg**
 - default arg should be placed in the last, i.e. after all non-default arg
 -            def sumOfNo(num1, num2=10, num3): pass   => invalid
--            def sumOfNo(num1, num2, num3=15): pass   => valid
+             def sumOfNo(num1, num2, num3=15): pass   => valid
 
 4. **var-arg**
 - when we have to pass any no of arg (zero - any)
@@ -78,13 +78,13 @@ Once we have defined a function, we can **call it from another function, program
 - internally the *arg is tuple.
 - if var-arg parameter is given first and then positional arg then , compulsory positional arg has to be called using keyword arg
 -           def varArgFunction(*arg, name): pass
--           varArgFunction(1,2,3,4, name='deepak')    => vaild
--           varArgFunction('deepak' ,1,2,3,4)    => invaild   (gets confused which parameter is for what)
--           def varArgFunction(*arg): pass
--           varArgFunction(1,2,3,4)        => valid  
--           varArgFunction()               => valid
--           varArgFunction (7)             => valid
--           varArgFunction (7,6)           => valid
+            varArgFunction(1,2,3,4, name='deepak')    => vaild
+            varArgFunction('deepak' ,1,2,3,4)    => invaild   (gets confused which parameter is for what)
+            def varArgFunction(*arg): pass
+            varArgFunction(1,2,3,4)        => valid  
+            varArgFunction()               => valid
+            varArgFunction (7)             => valid
+            varArgFunction (7,6)           => valid
 
 5. **Keyword-var-arg**
 - When want to pass argument as key and value fun_name(name='deepak', city='chennai') and want name and city to be treated as key and associated value as value for the key.
@@ -123,18 +123,18 @@ Once we have defined a function, we can **call it from another function, program
         - **new_list = list(map(lambda x: x * 2 , my_list))**
 
 ## Nested Function:
-- When the functionality is required within the function.
+- When the functionality is required within the function 
 -       def outer():
--               def inner(a,b):
--                   return a+b
--               inner(5,10)
--               inner(4,9)
+                def inner(a,b):
+                    return a+b
+                inner(5,10)
+                inner(4,9)
 - A function can return function 
 -       def outer():
--               def inner(a,b):
--                   return a+b
--               inner(5,10)
--               return inner      // returning a function
+                def inner(a,b):
+                    return a+b
+                inner(5,10)
+                return inner      // returning a function
 - A function can take function as arg
     - filter(lambda function , argList), map(lambda function , argList)
 - **if want to xecute inner() then the outer function must reurn inner()**
@@ -163,17 +163,17 @@ Once we have defined a function, we can **call it from another function, program
 4. **@deco-function-name is added as the anotation whose decorator is created with deco-function-name
     - eg
     -           def decofunction(func):
-    -                def innerfun(name):
-    -                   if(name='deepak'):
-    -                       print('Deepak name got')
-    -                   else:
-    -                       func(name)
-    -               return innerfunc
-    -           @decofunction
-    -           def functobedecorated(name):
-    -               print('deepak name was not there')
-    -           functobedecorated('abc')
-    -           functobedecorated('deepak')
+                     def innerfun(name):
+                        if(name='deepak'):
+                            print('Deepak name got')
+                        else:
+                            func(name)
+                    return innerfunc
+                @decofunction
+                def functobedecorated(name):
+                    print('deepak name was not there')
+                functobedecorated('abc')
+                functobedecorated('deepak')
 5. When @deco-function-name is used as a anotation for any function then automatically decorator function is clled on be half of it.
 6. When want to call manually
     - then **decorRef = deco-function-name(functobedecorated)**
@@ -181,22 +181,22 @@ Once we have defined a function, we can **call it from another function, program
 7. **Chaining Decorators in Python**
 - function can be decorated multiple times with different (or same) decorators. 
 -                def star(func):
--                   def inner(*args, **kwargs):
--                       print("*" * 30)
--                       func(*args, **kwargs)
--                       print("*" * 30)
--                   return inner
-- 
--                def percent(func):
--                   def inner(*args, **kwargs):
--                       print("%" * 30)
--                       func(*args, **kwargs)
--                       print("%" * 30)
--                   return inner
-- 
--               @star
--               @percent
--               def printer(msg):
--                   print(msg)
--               printer("Hello")    
+                    def inner(*args, **kwargs):
+                        print("*" * 30)
+                        func(*args, **kwargs)
+                        print("*" * 30)
+                    return inner
+  
+                 def percent(func):
+                    def inner(*args, **kwargs):
+                        print("%" * 30)
+                        func(*args, **kwargs)
+                        print("%" * 30)
+                    return inner
+  
+                @star
+                @percent
+                def printer(msg):
+                    print(msg)
+                printer("Hello")    
 
