@@ -77,6 +77,8 @@
 | split() | Split string by the occurrences of pattern. If capturing parentheses are used in pattern, then the text of all groups in the pattern are also returned as part of the resulting list. If maxsplit is nonzero, at most maxsplit splits occur, and the remainder of the string is returned as the final element of the list. |
 
 
+more imp function:- (https://docs.python.org/3/library/re.html)
+
 **eg of match()**
 -               import re
                 inputstring = input('Enter the pattern to check: ')
@@ -119,11 +121,19 @@
                     print(maych)   
 
 **eg of sub(pattern, repl, string, count=0, flags=0)**
+- *repl can be a string or a function*
 -               import re
                 inputstring = input('Enter the pattern to replace: ')
                 targetstring = input('Enter the Target String : ')
                 replacedString = re.sub(inputstring, '#', targetstring)
-                print(replacedString)    
+                print(replacedString)
+- repl as a function                                                                                                 
+                def dashrepl(matchobj):
+                    if matchobj.group(0) == '-': 
+                        return ' '
+                    else: 
+                        return '-'
+                re.sub('-{1,2}', dashrepl, 'pro----gram-files')     # 'pro--gram files'  
 
 **eg of subn(pattern, repl, string, count=0, flags=0)**
 -               import re
