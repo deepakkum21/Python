@@ -114,4 +114,37 @@
 | The name can be anything. | The name should be `__init__()` |
 | It is will executed if we call |  It is will executed automatically, Whenever we are creating an object | 
 | It can be called any no of times for an particular object | It will be called only once for an object |
-| It is used to implement business logic | It is used to declare and initailize instance variable |
+| It is used to implement business logic | It is used to declare and initailize instance variable |   
+
+## Types of variables:-
+1. Instance variables / object level variables
+2. Static variables / class level variables
+3. Local variables / method level variables
+
+## Types of methods:
+1. instance method / object releated method
+2. class methods / class level methods
+3. static methods / utility methods
+
+
+## ClassLevel Method:-
+-               class MyClass:
+                    ''' This class is regarding class method'''
+                    collegeName = 'ABC'         # static variable
+                    @classmethod
+                    def getCollegeName(cls):
+                        print('CollegeName: ' + cls.collegeName)
+
+                    MyClass.getCollegeName()    # class method can be called using className
+
+## Static Method:-
+-               class MyClass:
+                    ''' This class is regarding static method'''
+                    collegeName = 'ABC'
+                    @staticmethod
+                    def findAverage(a, b):
+                        print('Average: ' + (a+b)/2)
+
+                    obj = MyClass()
+                    obj.findAverage(4,5)        # static method can be called using obj ref
+                    MyClass.findAverage(5,6)    # static method can be called using className

@@ -2,7 +2,7 @@
 
 | **Constructor** |  **method** |                                                                                   
 | --------------- | ----------- |                                                                                             
-| name should be __ init__ | any name can be for the method |
+| name should be `__ init__()` | any name can be for the method |
 | will be executed automatically whenever we are creating object | will we executed whenever we call that method |
 | per object this will be executed only once | per object the method can be called any no of times |
 | generally it is used to declare and initialize instance variables | inside we can write business logic | 
@@ -17,14 +17,17 @@
 1. it should be used if the value of the variable is to be varied from object to object
 2. for every object a separate copy will be created if the instance variable will be created
 3. In general, inside constructor instance varaible are declared. 
-4. Access instance variable:-
+4. **Access instance variable**:-
     - inside calss => by using self
     - outside class => by using reference 
-5. Objectreferenece.__ dict__    =>   return the dict having instance variable with value
+5. `Objectreferenece.__ dict__`    =>   return the dict having instance variable with value
 6. **places where to declare**
     - inside constructor
     - inside instance method
-    - outside class using ref var
+    - outside class using obj ref var
+7. **Delete instance var**
+    - inside class : `del self.varName`
+    - outside class: `del objRef.varName`
 
 ### Static variable
 1. it should be used if the value of the varible has to be same for all the objects of that class
@@ -45,7 +48,7 @@
                      className.var=value   
     - outside the class using className.var= value                                               
 5. **modification of static var**
-    - either by using className or by self if it is in class method(havung @classmethod anotation)
+    - either by using className or by self if it is in class method(having @classmethod anotation)
     - but not using objref or by using self in instance method (infact this will lead in creation of instance var)
 
 ## Copy in Python 
