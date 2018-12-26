@@ -128,7 +128,7 @@ more imp function:- (https://docs.python.org/3/library/re.html)
                 replacedString = re.sub(inputstring, '#', targetstring)
                 print(replacedString)
 - repl as a function                                                                                                 
-                def dashrepl(matchobj):
+-               def dashrepl(matchobj):
                     if matchobj.group(0) == '-': 
                         return ' '
                     else: 
