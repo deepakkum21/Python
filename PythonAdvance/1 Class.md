@@ -151,3 +151,35 @@
                     obj = MyClass()
                     obj.findAverage(4,5)        # static method can be called using obj ref
                     MyClass.findAverage(5,6)    # static method can be called using className
+
+
+| **instance method** | **classLevel method** | **static method** |                                                                                  
+| ------------------- | --------------------- | ----------------- |                                                                 
+| Inside method body if we are using atleast one instance var then it is compulsory to use instance method | Inside method body if we are using only static variable   then it is highly recommended to use classLevel method   (@classmethod) | Inside method body if we are not using any static variable and instance var then it is highly recommended to use static method , to define general utility method |
+| no need to use any decorator | decorator is used to declare a class level method (@classmethod) | deocrator is optional, recommended to use (@staticmethod) |
+| The 1st argument to instance method should be the self, which is the reference to the current obj to access the instance variable | The 1st argument to class level method should be the  **cls**, which is the reference to the current class object by using that we can access the static var | It may or may not have any arg depending on the usage we can have arg |
+| inside instance method we can access both static and instance var | inside class level method we can only access static var, not instance var | it is used only incase when we are not using any of the instance and static var, then no point of accessing any one of them |
+| can call instance method by using objref | can call class level method by using objref and className, but recommended to use className | can call static method by using objref and className, but recommended to use className |
+
+
+## Getters and setters :-
+- *setters*
+    -            class MySetters:
+                    ''' Demonstrates setters'''
+                    def __init__(self, name, age):
+                        self.name = name
+                        self.age = age
+                    def setName(self, name):
+                        self.name = name
+                    def setAge(self, age):
+                        self.age = age
+- *getters*
+    -            class MyGetters:
+                    ''' Demonstrates getters'''
+                    def __init__(self, name, age):
+                        self.name = name
+                        self.age = age
+                    def setName(self):
+                        return self.name
+                    def setAge(self):
+                        return self.age
