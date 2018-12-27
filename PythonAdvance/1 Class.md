@@ -201,3 +201,117 @@
                         .............. 
                         class Head:
                             ...............
+4. Without existing outer calss object there is no chance of existing inner class object. Inner class object is always associated with the outer class object.  
+
+## To Access member of innerclass
+-                   class Outer:
+                    '''outer class'''
+                        def __init__(self):
+                            print('Outer class constructor')
+                        def outerMethod(self):
+                                print('outer method ')
+
+                        class Inner:
+                        '''Inner Class'''
+                            def __init__(self):
+                                print('Inner Class constructor')
+                            def innerMethod(self):
+                                print('inner method ')
+
+                    # 1st method to access
+                    outer = Outer()
+                    inner = outer.Inner()
+                    inner.innerMethod()
+
+                    # 2nd method to access
+                    inner = Outer().Inner()
+                    inner.innerMethod()
+
+                    # 3rd method to access
+                    Outer().Inner().innerMethod()
+
+- eg 
+-                   class Person:
+                        def __init__(self):
+                            self.name='Deepak'
+                            self.dob = self.DOB()
+                        def display(self):
+                            print('Name: ', self.name)
+                            self.dob.display()
+
+                        class DOB:
+                            def __init__(self):
+                                self.date = 15
+                                self.month = 10
+                                self.year = 1950
+                            def dispaly(self):
+                                print('DOB: {}/{}/{}'.format(self.date, self.month, self.year))
+                    
+                    person = Person()
+                    person.display()
+
+- eg 
+-                   class Person:
+                        def __init__(self, name, date, month, year):
+                            self.name= name
+                            self.dob = self.DOB(date, month, year)
+                        def display(self):
+                            print('Name: ', self.name)
+                            self.dob.display()
+
+                        class DOB:
+                            def __init__(self, date, month, year):
+                                self.date = date
+                                self.month = month
+                                self.year = year
+                            def dispaly(self):
+                                print('DOB: {}/{}/{}'.format(self.date, self.month, self.year))
+                    
+                    person = Person('Akshay', 24 , 5 1996)
+                    person.display()  
+
+-                   class Human:
+                        def __init__(self):
+                            self.name = 'Deepak'
+                            self.head = self.Head()
+                        def displayHuman(self):
+                            print(self.name)
+                            self.head.talk()
+                            self.head.brain.think()
+
+                        class Head:
+                            def __init__(self):
+                                self.brain = self.Brain()
+                            def talk(self):
+                                print('Talking')
+                        
+                            class Brain:
+                                def __init__(self):
+                                    pass
+                                def think(self):
+                                    print('Thinking')
+
+                    humanRef = Human()
+                    humanRef.displayHuman()
+
+
+## Nested Methods
+- When a functionality which is required multiple times but in only a particular method
+- It helps in code reusability
+-                   class Test:
+                    '''Nested method demo'''
+                        def _init__(self):
+                            pass
+                        def m1(self):
+                            def arithmaticoperation(a, b):
+                                print('First Arg: ', a)
+                                print('Second Arg: ', b)
+                                print('Sum: ', a+b)
+                                print('Product: ', a * b)
+                                print('Subtract: ', a - b)
+
+                            arithmaticoperation(4, 5)
+                            arithmaticoperation(9, 8)
+                    test = Test()
+                    test.m1()
+
