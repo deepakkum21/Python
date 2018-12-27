@@ -12,6 +12,7 @@
 - instance variable(non-static)
 - static variable
 - local variable
+- global variable
 
 ### Instance Variable:-
 1. it should be used if the value of the variable is to be varied from object to object
@@ -34,7 +35,7 @@
 2. for every object same copy will be assigned
 3. In general, within class static variable is declared
 4. **places to declare**
-    - within the class directly
+    - within the class directly but outside any method
     - inside contructor by using class name
     - inside instance method by using class name
     - by using class method
@@ -46,10 +47,61 @@
         -        @staticmethod                                                                                          
                  def method_name():                                                                
                      className.var=value   
-    - outside the class using className.var= value                                               
-5. **modification of static var**
-    - either by using className or by self if it is in class method(having @classmethod anotation)
-    - but not using objref or by using self in instance method (infact this will lead in creation of instance var)
+    - outside the class using className.var= value 
+5. **Accessing** :- either by className or obj ref
+    - *within class*  (className, self, cls)
+    - *outside class*  (obj ref, classRef)
+    -           class Test:
+                    ''' to demonstrate accessing of static var'''
+                    a = 10
+                    def __init__(self):
+                        print('inside constructor')
+                        print(Test.a)
+                        print(self.a) 
+                    def method1(self):
+                        print('inside method')
+                        print(Test.a)
+                        print(self.a) 
+
+                    @classmethod
+                    def classmethod(cls):
+                        print('inside class method')
+                        print(Test.a)
+                        print(cls.a) 
+
+                    @staticmethod
+                    def staticmethod():
+                        print('inside class method')
+                        print(Test.a) 
+
+                testRef = Test()
+                print('from outside the class')                                           
+                print(testRef.a)
+                print(Test.a)
+
+6. **modification of static var**
+    - *within class* :- either by **using className or by self** if it is in class method(having @classmethod anotation)
+    - *outside class* :- but not using objref or by using self in instance method (infact this will lead in creation of instance var)
+
+
+### Global Variable
+1. These variable can be accessed from any where in the class.
+2. We can make any variable as global by prefixing it with **global** keyword.
+3.              x = 10
+                class MyGlobal:
+                    ''' Demonstrate global var'''
+                    def m1(self):
+                        global x
+                        x = 888
+                        print(x)
+                    
+                    def m2(self):
+                        print(x)
+                
+                globalRef = MyGlobal()
+                globalRef.m1()
+                globalRef.m2()
+                print(x)
 
 ## Copy in Python 
 sometimes we may want to have the original values unchanged and only modify the new values or vice versa. In Python, there are two ways to create copies:

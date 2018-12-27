@@ -120,6 +120,7 @@
 1. Instance variables / object level variables
 2. Static variables / class level variables
 3. Local variables / method level variables
+4. global variable
 
 ## Types of methods:
 1. instance method / object releated method
@@ -128,6 +129,7 @@
 
 
 ## ClassLevel Method:-
+- Class method can be used when we are only using static variable and not instance variable.
 -               class MyClass:
                     ''' This class is regarding class method'''
                     collegeName = 'ABC'         # static variable
@@ -138,6 +140,7 @@
                     MyClass.getCollegeName()    # class method can be called using className
 
 ## Static Method:-
+- static method can be used when we are not using both static variable and instance variable.
 -               class MyClass:
                     ''' This class is regarding static method'''
                     collegeName = 'ABC'
