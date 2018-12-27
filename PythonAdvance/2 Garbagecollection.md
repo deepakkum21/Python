@@ -21,5 +21,21 @@
                         user3 = None
                         # output
                         No reference left for <__main__.User object at 0x212bee9d9>
-                        
-4. 
+                        (If all the 3 ref are now none so there is now no reference so __del__() is automatically called)
+
+## How Garbage collection varies with implementation
+Garbage collection is a mechanism which varies with Python implementations like CPython, Jython or IronPython.
+1. **C Implementation of Python** uses **reference counting to track unreachable objects**. It doesn’t track the objects at each line of execution instead, it periodically executes a cycle detection algorithm which looks for inaccessible objects and cleans them.
+2. **Jython uses the JVM’s garbage collector**. The same applies to **IronPython which uses the CLR garbage collector**
+
+## Grabage Collector
+1. Based on ourirement we can enable or disable GC
+2. gc module has the GC related function
+3. gc.isenabled()   => to check wheather gc is enabled or not
+4. gc.enable()      => to enable the gc
+5. gc.disable()     => to disable the gc
+
+## Destructor
+- `__del__()`   :-
+    - This is always called before a object is being destroyed by the GC.
+    - Here those code logic can be written for closing connection, all the thing which should be done before cleaning the activity.
