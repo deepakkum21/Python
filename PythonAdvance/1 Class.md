@@ -183,3 +183,21 @@
                         return self.name
                     def setAge(self):
                         return self.age
+
+
+## Inner classes:
+1. The class which is declared inside another class.
+2. Without existing one type of object if there is no chance of existing another type of object then, it is recommended to go for nested or inner class.
+3. eg 
+    -               class Car:
+                        ..............
+                        class Engine:
+                            .............
+    -               class University:
+                        .............. 
+                        class Department:
+                            ...............
+    -               class Human:
+                        .............. 
+                        class Head:
+                            ...............
