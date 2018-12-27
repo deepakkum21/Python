@@ -38,4 +38,17 @@ Garbage collection is a mechanism which varies with Python implementations like 
 ## Destructor
 - `__del__()`   :-
     - This is always called before a object is being destroyed by the GC.
-    - Here those code logic can be written for closing connection, all the thing which should be done before cleaning the activity.
+    - Here those code logic can be written for closing connection, resource dealocation and clean up activities all the thing which should be done before cleaning the activity.
+-                   class GCExample:
+                        '''GC Demo'''
+                        def __init__(self):
+                            print('constructor called')
+                        def __del__(self):
+                            print('destructor called, GC about to destroy object')
+
+                        gcTest = GCExample()
+                        # output:- constructor called
+                        gcTest = None  
+                        # output:- destructor called, GC about to destroy object
+
+- if manually object is not made eligible for gc, then just before end of program execution all the obj will be made available ofr gc and destructor `(__de__(self))` will be called .
