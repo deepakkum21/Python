@@ -177,18 +177,18 @@
 - **if head element of First list is not present in the tail part of any other list then consider that element in the result and remove that element from all the list .**
 - One clue **Object will always be the last in the MRO list**
 - The algorithm says 
-    mro(P) = P + Merge(mro(immediate parents) + Parentlist)
-           = P + Merge(mro(X), mro(Y), mro(C), XYC)
-           = P + Merge(XABO, YBCO, CO, XYC)
-           = P + X + Merge(ABO, YBCO, CO, YC)
-           = P + X + A + Merge(BO, YBCO, CO, YC)
-           = P + X + A + Merge(BO, YBCO, CO, YC)   { B is present in the tail part so leave that list check other list}
-           = P + X + A + Y + Merge(BO, BCO, CO, C)
-           = P + X + A + Y + B + Merge(O, CO, CO, C)    { O is present in the tail part so leave that list check other list}
-           = P + X + A + Y + B + Merge(O, CO, CO, C)
-           = P + X + A + Y + B + C + Merge(O, O, O)
-           = P + X + A + Y + B + C + O
-           = PXAYBCO
+    -       mro(P)  = P + Merge(mro(immediate parents) + Parentlist)
+                    = P + Merge(mro(X), mro(Y), mro(C), XYC)
+                    = P + Merge(XABO, YBCO, CO, XYC)
+                    = P + X + Merge(ABO, YBCO, CO, YC)
+                    = P + X + A + Merge(BO, YBCO, CO, YC)
+                    = P + X + A + Merge(BO, YBCO, CO, YC)   { B is present in the tail part so leave that list check other list}
+                    = P + X + A + Y + Merge(BO, BCO, CO, C)
+                    = P + X + A + Y + B + Merge(O, CO, CO, C)    { O is present in the tail part so leave that list check other list}
+                    = P + X + A + Y + B + Merge(O, CO, CO, C)
+                    = P + X + A + Y + B + C + Merge(O, O, O)
+                    = P + X + A + Y + B + C + O
+                    = PXAYBCO
 
 -                   class D:
                         pass
@@ -205,18 +205,18 @@
                     
                     print(A.mro())
 - The algorithm says 
-    mro(P) = A + Merge(mro(immediate parents) + Parentlist)  
-           = A + Merge(mro(B), mro(C), BC)              
-           = A + Merge(BDEO, CDFO, BC)
-           = A + B + Merge(DEO, CDFO, C)    { D is present in the tail part so leave that list check other list}
-           = A + B + Merge(DEO, CDFO, C)
-           = A + B + C + Merge(DEO, DFO)
-           = A + B + C + D + Merge(EO, FO)
-           = A + B + C + D + E + Merge(O, FO)   { O is present in the tail part so leave that list check other list}
-           = A + B + C + D + E + Merge(O, FO)
-           = A + B + C + D + E + F + Merge(O, O)
-           = A + B + C + D + E + F + O
-           = ABCDEFO
+    -       mro(P) = A + Merge(mro(immediate parents) + Parentlist)  
+                = A + Merge(mro(B), mro(C), BC)              
+                = A + Merge(BDEO, CDFO, BC)
+                = A + B + Merge(DEO, CDFO, C)    { D is present in the tail part so leave that list check other list}
+                = A + B + Merge(DEO, CDFO, C)
+                = A + B + C + Merge(DEO, DFO)
+                = A + B + C + D + Merge(EO, FO)
+                = A + B + C + D + E + Merge(O, FO)   { O is present in the tail part so leave that list check other list}
+                = A + B + C + D + E + Merge(O, FO)
+                = A + B + C + D + E + F + Merge(O, O)
+                = A + B + C + D + E + F + O
+                = ABCDEFO
 
 
 ## Super() 
