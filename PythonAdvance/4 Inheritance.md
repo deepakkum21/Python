@@ -220,5 +220,153 @@
 
 
 ## Super() 
+1. super() allows us to call a method of the parent class from the child class depending on the requirement.
+2. it helps in code resuablity without creating a Parent class obj.
+3. When a child class has multiple parents and then a super() is called it will follow C3 algo for MRO.
+4.              class Person:
+                ''' super() demo'''
+                    def __init__(self, name, age):
+                        self.name = name
+                        self.age = age
+                    def display(self):
+                        print('Name: ', self.name)
+                        print('Age: ', self.age)
+                
+                class Student:
+                     def __init__(self, name, age, rollno, marks):
+                        super().__init__(name, age)
+                        self.rollno = rollno
+                        self.marks = marks
+                    def display(self):
+                        super().display()
+                        print('Rollno: ', self.rollno)
+                        print('Marks: ', self.marks)
+
+                class Teacher:
+                     def __init__(self, name, age, salary, subject):
+                        super().__init__(name, age)
+                        self.salary = salary
+                        self.subject = subject
+                    def display(self):
+                        super().display()
+                        print('Salary: ', self.salary)
+                        print('Subject: ', self.subject)
+
+                std = Student('deepak', 15, 01, 59)
+                teacher = Teacher('Akshay', 25, 10000, 'History')
+                std.display()
+                teacher.display()
+
+### How to call a particular  Parent class method using super()
+To by pass the method of own parent class and to call a particular Parent class method
+1. **parentClassName.methodName(self)**
+    -           class A:
+                    def m1(self):
+                        print('class A method')
+                class B(A):
+                    def m1(self):
+                        print('class B method')
+                class C(B):
+                    def m1(self):
+                        print('class C method')
+                class D(C):
+                    def m1(self):
+                        print('class D method')
+                class E(D):
+                    def m1(self):
+                        B.m1(self)          # to call B class m1() method directly
+                        print('class E method')
+                
+                eRef = E()
+                eRef.m1()
+
+1. **super(ChildClass, self).methodName()**
+    - If you want to call parent class method then first arg should be the child class of the parent class whose method you want to call, ie. means super od the class which is the 1st arg.
+    -           class A:
+                    def m1(self):
+                        print('class A method')
+                class B(A):
+                    def m1(self):
+                        print('class B method')
+                class C(B):
+                    def m1(self):
+                        print('class C method')
+                class D(C):
+                    def m1(self):
+                        print('class D method')
+                class E(D):
+                    def m1(self):
+                        super(D, self).m1()          # to call C class m1() method directly 
+                        print('class E method')
+                
+                eRef = E()
+                eRef.m1()
+
+                
+## Case Study for Super()
+1. From child class by using super() we cannot call Parent class instance var . We should use self only.
+2. From child class by using super() we can call Parent class static var
+    -           class Parent:
+                    a=10
+                    def __init__(self):
+                        self.b = 20
+
+                class Child(Parent):
+                    def m1(self):
+                        print(super().a)      # valid   (to call parent class static var)
+                        print(super().b)      # invalid (cannot use super to call Parent class instance var)
+                        print(self.b)         # valid   (to call Parent class instance var)
+
+                child = Child()
+                child.m1()
+3. From **child class constructor by using super() We can call Parent class constructor, instance method, class method and static method**
+    -           class parent:
+                    def __init__(self):
+                        print('Parent constructor')
+                    def m1(self):
+                        print('Parent Instance method') 
+                    @classmethod
+                    def m2(cls):
+                        print('Parent Class method')
+                    @staticmethod 
+                    def m3():
+                        print('Parent Static method') 
+
+                class Child(Parent):
+                    def _init__(self):
+                        super().__init__()      => valid
+                        super().m1()            => valid
+                        super().m2()            => valid
+                        super().m3()            => valid
+                
+                child = Child()
+4. From **child class instance by using super() We can call Parent class constructor, instance method, class method and static method**
+    -           class parent:
+                    def __init__(self):
+                        print('Parent constructor')
+                    def m1(self):
+                        print('Parent Instance method') 
+                    @classmethod
+                    def m2(cls):
+                        print('Parent Class method')
+                    @staticmethod 
+                    def m3():
+                        print('Parent Static method') 
+
+                class Child(Parent):
+                    def method1(self):
+                        super().__init__()      => valid
+                        super().m1()            => valid
+                        super().m2()            => valid
+                        super().m3()            => valid
+                
+                child = Child()
+                child.method1()
+
+
+--------------- need to check------------------------
+5. From **child class method by using super() We can call Parent class constructor, instance method, class method and static method**
+6. From **child class static method by using super() We can call Parent class constructor, instance method, class method and static method**
+
 
 
