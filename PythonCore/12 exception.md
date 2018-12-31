@@ -1,5 +1,7 @@
 # Exception
 
+https://data-flair.training/blogs/python-exception-handling/
+https://www.programiz.com/python-programming/exception-handling
 
 ## User Defined Exception:-
 1. **raise** keyword is used to raise a user defined exception.
