@@ -1,0 +1,17 @@
+## to install django in windows:
+- **easy_install django==2.1**
+- django-admin --version -> to verify
+- python -m djanbo --version
+
+## To create a project
+- django-admin startproject project_name
+
+## To run on web
+this command needs to be run by going inside the project
+- cd project_name
+- python manage.py runserver (runs in default port 8000)
+- python manage.py runserver portno
+
+## To create app in django-project
+- to execute the current command you should in the folder where manage.py is present
+- python manage.py startapp app_name
