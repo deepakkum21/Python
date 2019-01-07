@@ -21,6 +21,7 @@ urlpatterns = [
     # main home route
     path('', include('blog.urls')),
     # blog app main route
-    path('blog-dev/', include('blog.urls')), # include sends only remaining part of the url till which it matchs
-    path('', include('users.urls'))
+    # path('blog-dev/', include('blog.urls')), # include sends only remaining part of the url till which it matchs
+    path('', include('users.urls')),
+   
 ]

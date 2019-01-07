@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # added the custom created app 'appname.apps.configfilename'
     'blog.apps.BlogConfig',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    # installed cripsy-form
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR]
+
+# To tell which css framework to use bydefault is bootstrap2
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# To redirect to home after successful login
+# overriding the default django view which redirect to  /accounts/profile/
+LOGIN_REDIRECT_URL = 'blog-home'
+
+# To override the default django login route
+LOGIN_URL = 'login'
