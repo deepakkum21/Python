@@ -144,7 +144,7 @@ Once we have defined a function, we can **call it from another function, program
 
 ## higher order functions
 1. Function that take other functions as arguments
-        def inc(x):
+-       def inc(x):
             return x + 1
 
         def dec(x):
@@ -160,7 +160,7 @@ Once we have defined a function, we can **call it from another function, program
 1. A decorator takes in a function, adds some functionality and returns it.
 2. **add functionality to an existing code**
 3. It help us to make our code shorter and more pythonic.
-4. **@deco-function-name is added as the anotation whose decorator is created with deco-function-name
+4. **@deco-function-name is added as the anotation whose decorator is created with deco-function-name**
     - eg
     -           def decofunction(func):
                      def innerfun(name):

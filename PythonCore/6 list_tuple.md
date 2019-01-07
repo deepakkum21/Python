@@ -84,7 +84,7 @@
 | slice() |	creates a slice object specified by range() |                    |                     
 | sorted() |	returns sorted list from a given iterable |                    |                     
 | sum() |	Add items of an Iterable |                    |                     
-| zip() |	Returns an Iterator of Tuples |                    |                     
+| zip(list1, list2) |	Returns an Iterator of Tuples | makes one to one match with the two list and convert it into list of tuples by taking one from each list to form a tuple |                     
 
 
 ### Aliasing :
@@ -124,29 +124,31 @@
 ### list packing and Unpacking
 1. **list packing**
     -     a = 1  
-    -     b = 2 
-    -     c = 3 
-    -     d = 4
-    -     listVar = [a, b, c, d]
-    -     print(listVar)  => [1,2,3,4]   
+          b = 2 
+          c = 3 
+          d = 4
+          listVar = [a, b, c, d]
+          print(listVar)  => [1,2,3,4]   
 2. **list unpacking**
     -     listVar = [2,3,7,8]
-    -     a, b, c, d = listvar
-    -     print('a = {} ,b = {} , c = {} ,d = {}'.format(a,b,c,d))     =>  a = 2, b = 3, c = 7, d = 8
+          a, b, c, d = listvar
+          print('a = {} ,b = {} , c = {} ,d = {}'.format(a,b,c,d))     =>  a = 2, b = 3, c = 7, d = 8
 
 
 ### Nested List
 - listVar = [1,2,3,[4,5,6],7]
 
 ## List Comprehension 
-1. listVar = [x for x in range(1,11)]   => lsitVar = [1,2,3,4,5,6,7,8,9,10]
+1. `listVar = [x for x in range(1,11)]   => lsitVar = [1,2,3,4,5,6,7,8,9,10]`
 2. can also perform extra activity
-    - listVar = [x for x in range(1,11) if x%2]             
+    - `listVar = [x for x in range(1,11) if x%2]`             
 3. syntax: **[expression for x in sequence condition]**
     - to get list of values present in both list l1 and l2
-        - [x for x in l1 if x in l2]
+        - `[x for x in l1 if x in l2]`
     - to get list of values present in list l1 but not in list l2
-        - [x for x in l1 if x not in l2]
+        - `[x for x in l1 if x not in l2]`
+    - to get list of (letter, num) pair of each letter in 'abcd' and each number in '0123'
+        - `[(letter, number) for letter in 'abcd' for number in range(4)]`
 
 
 
@@ -227,15 +229,15 @@ Methods that add items or remove items are not available with tuple. Only the fo
 ### Tuple packing and Unpacking
 1. **tuple packing**
     -     a = 1  
-    -     b = 2 
-    -     c = 3 
-    -     d = 4
-    -     tupleVar = a, b, c, d
-    -     print(tupleVar)  => (1,2,3,4)   
+          b = 2 
+          c = 3 
+          d = 4
+          tupleVar = a, b, c, d
+          print(tupleVar)  => (1,2,3,4)   
 2. **tuple unpacking**
     -     tupleVar = (2,3,7,8)
-    -     a, b, c, d = tuplevar
-    -     print('a = {} ,b = {} , c = {} ,d = {}'.format(a,b,c,d))     =>  a = 2, b = 3, c = 7, d = 8
+          a, b, c, d = tuplevar
+          print('a = {} ,b = {} , c = {} ,d = {}'.format(a,b,c,d))     =>  a = 2, b = 3, c = 7, d = 8
 3. can raise value error like too many and too less value to unpack if no of elements in tuple is not equal to the no of variable in which it is assigned 
 
 

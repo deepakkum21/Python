@@ -103,6 +103,25 @@
                 globalRef.m2()
                 print(x)
 
+## Scope of variables:-
+- Python follows **LEGB (Local, Enclosing, Global, Built-in)** hierarchy for variable scope
+- The interpreter will first look in the local, if not found then will look in enclosing, if then also could not find the var then will look in the the global scope and in last will look in the built-in var and then also is not able to find the var , gives error.
+
+## nonlocal x
+- nonlocal is very similar to that of global, except that the **nonlocal is used for variables in outer function scopes** and the **global is used for variable in the global scope.**
+-               def outside():
+                    msg = "Outside!"
+                    def inside():
+                        nonlocal msg
+                        msg = "Inside!"
+                        print(msg)
+                    inside()
+                    print(msg)
+
+                outside()
+                ## Inside!
+                ## Inside!
+
 ## Copy in Python 
 sometimes we may want to have the original values unchanged and only modify the new values or vice versa. In Python, there are two ways to create copies:
 - Shallow Copy(.copy(arg))
