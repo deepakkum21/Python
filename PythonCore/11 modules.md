@@ -32,6 +32,26 @@
     - PYTHONPATH (an environment variable with a list of directory).
     - The installation-dependent default directory.
 
+## To know the path of sys module
+-           import sys
+            print(sys.path)
+
+## Can Add a module to a sys path
+-           import sys
+            sys.path.append('path_which you wnat to include')
+            other imports
+- **This way of appending sys path can lead to many problems** so better to add the path in the environment variable
+- *In windows*
+    - open envirnment variable using advance setting 
+    - **Add a new variable named PYTHONPATH and in value give the path**
+- *in MAC*
+    - **nano `/.bash_profiles**
+    - Inlast line 
+        - export PYTHONPATH="location"
+        - ctrl+x -> y to save and exit
+    
+            
+
 ## Reloading a Module
 1. For every module .PYC file will be generated which is the compile form of .py file.
 2. These .pyc file are stored in the **__ pycache__**
