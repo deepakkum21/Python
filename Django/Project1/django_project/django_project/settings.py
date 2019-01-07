@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     # installed cripsy-form
     'crispy_forms',
+    # installed Pillow which help in working with images in python
+    #'Pillow'
 ]
 
 MIDDLEWARE = [
@@ -126,6 +128,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR]
 
+# To know where the images are stored for the project 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # To tell which css framework to use bydefault is bootstrap2
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -135,3 +141,4 @@ LOGIN_REDIRECT_URL = 'blog-home'
 
 # To override the default django login route
 LOGIN_URL = 'login'
+

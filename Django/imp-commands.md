@@ -12,6 +12,9 @@ this command needs to be run by going inside the project
 - python manage.py runserver (runs in default port 8000)
 - python manage.py runserver portno
 
+## To use django shell
+- python manage.py shell
+
 ## To create app in django-project
 - to execute the current command you should in the folder where manage.py is present
 - python manage.py startapp app_name
@@ -29,3 +32,6 @@ this command needs to be run by going inside the project
 ## To install django-crispy-form
 - django 3rd [party]
 - pip install django-crispy-forms
+
+## to install pillow (helps in working with images in python)
+- pip install Pillow
