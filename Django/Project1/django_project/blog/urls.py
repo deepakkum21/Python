@@ -4,12 +4,16 @@ from .views import ( PostListView,
                      PostDetailView, 
                      PostCreateView,
                      PostUpdateView,
-                     PostDeleteView
+                     PostDeleteView,
+                     UserPostListView
 )
 
 urlpatterns = [
     # path('', views.home, name = 'blog-home'),
     path('', PostListView.as_view(), name = 'blog-home'),
+
+    # for posts of particular user
+    path('user/<str:username>/', UserPostListView.as_view(), name = 'user-posts'),
 
     # for postdetail using django convention
     path('post/<int:pk>/', PostDetailView.as_view(), name = 'post-detail'),

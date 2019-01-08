@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import (ListView, 
                         DetailView,
                         CreateView,
@@ -6,6 +6,7 @@ from django.views.generic import (ListView,
                         DeleteView
 )
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.models import User
 from .models import Post
 
 # Create your views here.
@@ -30,6 +31,30 @@ class PostListView(ListView):
 
     # to order the posts by latest prefix - 
     ordering = ['-date_posted']
+
+    # this is the class based view attribute for pagination where no of object per page has to be specified
+    paginate_by = 4
+
+
+# class based view
+class UserPostListView(ListView):
+    model = Post
+
+    # by deafault the generic ListView template will be app/post_list.html follow pattern of <app>/<model>_<viewtype>.html
+    # since we are not having by default app/post_list.html template and if we want to manually change the name of the template
+    # then have to extensively define it as template_name and pass the value of the template which you want to render
+    template_name = 'blog/user_posts.html'
+
+    # created the var on which to loop as by deafult it stores as ObjectList
+    context_object_name = 'posts'
+
+    # this is the class based view attribute for pagination where no of object per page has to be specified
+    paginate_by = 4
+
+    #
+    def get_queryset(self):
+        user = get_object_or_404(User, username = self.kwargs.get('username'))
+        return Post.objects.filter(author = user).order_by('-date_posted')
 
 
 class PostDetailView(DetailView):
