@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -10,6 +11,11 @@ class Post(models.Model):
     # date_posted = models.DateTimeField(auto_now = True)
     date_posted = models.DateTimeField(default= timezone.now)
     author = models.ForeignKey(User, on_delete = models.CASCADE) # if user is deleted all the posts related to that user will be deleted
+
+    # reverse return the url as string 
+    # to get to the url after posting a post
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={ 'pk': self.pk })
 
     def __str__(self):
         return self.title
