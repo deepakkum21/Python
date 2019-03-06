@@ -127,7 +127,7 @@
 3. & => **if both bits are 1 then result is 1**
 4. | => **if at least one bit is one then result is 1**
 5. ^ => **if both bits are different then result is 1**
-6. **~ (bitwise complement operator)** :-
+6. **~(bitwise complement operator)** :-
     - The most significant bit is sign bit
     - 0 means +ve no.
     - 1 means -ve no.
