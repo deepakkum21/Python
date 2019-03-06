@@ -67,7 +67,7 @@ learn python 3 because from **2020 no support for python 2 will be there**
     - eg 12Name -> not valid python identifier.
 6. **No length restriction but not recomended** to have to lengthy identifier name so that readiblity is maintained.
 7. reserved words should not be used as identifiers.
-    - if=20 is not allowed and will get invalid syntac error
+    - if=20 is not allowed and will get invalid syntax error
 
 ### Naming conventions for Python identifiers −
 1. Class names start with an uppercase letter. 
@@ -75,11 +75,11 @@ learn python 3 because from **2020 no support for python 2 will be there**
 2. All other identifiers start with a lowercase letter.
     - methodName
 3. Starting an identifier with a **single leading underscore indicates that the identifier is private**. 
-    - eg _privateIndetifier
+    - eg `_privateIdentifier`
 4. Starting an identifier with **two leading underscores indicates a strongly private identifier**.
-    - eg __stronglyPrivateIndetifier
+    - eg `__stronglyPrivateIdentifier`
 5. If the identifier **also ends with two trailing underscores**, the identifier is a **language-defined special name**.
-    - eg __languageDefinedIdentifier__
+    - eg `__languageDefinedIdentifier__`
 
 ## Reserved Words:
 1. The keyword which we cannot use them as constant or variable or any other identifier names. 
