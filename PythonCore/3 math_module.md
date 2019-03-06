@@ -26,7 +26,7 @@
 | floor(x) |	Returns the largest integer less than or equal to x | floor(10.1) => 10 |
 | fmod(x, y) |	Returns the remainder when x is divided by y |
 | frexp(x) |	Returns the mantissa and exponent of x as the pair (m, e) |
-| fsum(iterable |)	Returns an accurate floating point sum of values in the iterable |
+| fsum(iterable) |	Returns an accurate floating point sum of values in the iterable |
 | isfinite(x) |	Returns True if x is neither an infinity nor a NaN (Not a Number) |
 | isinf(x) |	Returns True if x is a positive or negative infinity |
 | isnan(x) |	Returns True if x is a NaN |
