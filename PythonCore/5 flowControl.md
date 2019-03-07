@@ -1,7 +1,7 @@
 # Flow Control
 These decide the order in which the statement will be executed
 1. Selection statement (if,elif,if else)
-2. Iterartive statement (for, while )
+2. Iterative statement (for, while )
 3. Transfer statement (pass, continue, break)                          
 
 
