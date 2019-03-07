@@ -65,8 +65,8 @@
         - %f ---> float
         - %s ---> string
         - print('formatted string' %(list of variables))
-        - eg a,b,c = 10,20,30   => print('a value of %i' %a)  -> a value is 10
-        - eg a,b,c = 10,20,30   => print('b value of %i and c value is %d' %(b,c))  -> b value is 20 and c value is 30
+        - eg a,b,c = 10,20,30   => print('a value is %i' %a)  -> a value is 10
+        - eg a,b,c = 10,20,30   => print('b value is %i and c value is %d' %(b,c))  -> b value is 20 and c value is 30
     - **print with replacement operator**
         - fisrtName = 'deepak'
         - lastName = 'kumar'
