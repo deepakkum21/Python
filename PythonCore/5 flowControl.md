@@ -2,10 +2,9 @@
 These decide the order in which the statement will be executed
 1. Selection statement (if,elif,if else)
 2. Iterative statement (for, while )
-3. Transfer statement (pass, continue, break)                          
-** -------------- **
+3. Transfer statement (pass, continue, break)  
 
-
+## In Details:-
 1. **Selection Statement**
 - when decision is made on some criteria.
     - **if** 
