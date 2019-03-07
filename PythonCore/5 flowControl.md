@@ -3,7 +3,7 @@ These decide the order in which the statement will be executed
 1. Selection statement (if,elif,if else)
 2. Iterative statement (for, while )
 3. Transfer statement (pass, continue, break)                          
-
+** -------------- **
 
 
 1. **Selection Statement**
