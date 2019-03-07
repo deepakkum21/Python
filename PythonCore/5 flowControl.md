@@ -25,26 +25,26 @@ These decide the order in which the statement will be executed
 3. **Transfer Statement**
 - When want to tranfer the control from one statement to other
     - **break**
-        - based on some sondition when want to break the loop execution
+        - based on some condition when want to break the loop execution
         -     for i in range(10) : 
-        -       if(i==6):
-        -           break
-        -       print(i,end=' ')
+                if(i==6):
+                    break
+                print(i,end=' ')
         - o/p =>0 1 2 3 4 5
     - **continue**
         - to skip current iteration and continue with next iteration for that particular loop in which it was declared
         - it doesnot transfer the control to end loop
         -     for i in range(10) : 
-        -       if(i==6):
-        -           continue
-        -       print(i)
+                if(i==6):
+                    continue
+                print(i)
         - o/p =>0 1 2 3 4 5 7 8 9
     - **pass**
         - Whenever block is defined it is always expecting some functionality but there might be situation when we are not in a situation to define or would want to define it in the future then in the body of block we can mention it as pass.
         - statement following after pass keyword in the asme block will also be executed  
         - It can be used in class, function, control statement 
         -     class passExample:
-        -         pass 
+                  pass 
     
 
 ## else conditional statement with loop (for, while)
