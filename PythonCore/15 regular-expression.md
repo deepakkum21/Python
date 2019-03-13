@@ -115,7 +115,7 @@ more imp function:- (https://docs.python.org/3/library/re.html)
 **eg of finditer()**
 -               import re
                 inputstring = input('Enter the pattern to check: ')
-                matchiter = re.finiter(inputstring, 'abhfbcmbkakbca')
+                matchiter = re.finditer(inputstring, 'abhfbcmbkakbca')
                 for match in matchiter:
                     print(type(match))
                     print(maych)   
