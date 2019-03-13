@@ -64,6 +64,8 @@
 | ^a | check whether the string start with a or not | 
 | a$ | check whether the string ends with a or not | 
 
+more special characters:- (https://docs.python.org/3/library/re.html)
+
 
 
 | **Imp RE functions** | **Description** |         
