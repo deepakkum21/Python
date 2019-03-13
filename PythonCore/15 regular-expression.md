@@ -118,7 +118,7 @@ more imp function:- (https://docs.python.org/3/library/re.html)
                 matchiter = re.finditer(inputstring, 'abhfbcmbkakbca')
                 for match in matchiter:
                     print(type(match))
-                    print(maych)   
+                    print(match)   
 
 **eg of sub(pattern, repl, string, count=0, flags=0)**
 - *repl can be a string or a function*
