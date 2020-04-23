@@ -26,10 +26,19 @@ The authors and publisher of this book have used their best efforts in preparing
 # Installing Spacy (Similarity detection) (NLP library)
 -`conda install -c conda-forge spacy`
 - support of 49 languages
--`python -m spacy download en` **additional component need by spacy for english
+-`python -m spacy download en` **additional component need by spacy for english**
+-`python -m spacy download en_core_web_md`  **medium**
+-`python -m spacy download en_core_web_lg`	**large**
 
 ## Source of text analysis
 - `https://www.gutenberg.org`
+
+# install tweepy
+-`pip install tweepy>=3.7
+-`pip install tweet-preprocessor`  **for cleaning the tweets**
+
+# install geopy (translate location into longitute and latitude)
+-`conda install -c conda-forge geopy`
 
 # Installing Wordcloud (NLP library)
 -`conda install -c conda-forge wordcloud`
