@@ -7,3 +7,9 @@ Python related concepts and stuffs
 3. first released in **1991**
 4. Syntax taken from C and ABC language
 5.
+
+## creating a new env in anaconda
+-`conda create -n envname python=version anaconda`
+
+## acvtivating conda env
+-`activate envname`
